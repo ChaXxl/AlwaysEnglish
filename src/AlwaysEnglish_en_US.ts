@@ -26,6 +26,49 @@
     </message>
 </context>
 <context>
+    <name>home</name>
+    <message>
+        <location filename="qml/page/home.qml" line="9"/>
+        <source>App-specific settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="69"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="99"/>
+        <source>Deactivate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="107"/>
+        <source>Add an APP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="127"/>
+        <source>icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="138"/>
+        <source>Turn on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="142"/>
+        <source>Caps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="146"/>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>settings</name>
     <message>
         <location filename="qml/page/settings.qml" line="8"/>
