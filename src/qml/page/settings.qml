@@ -5,7 +5,6 @@ import QtQuick.Controls 2.15
 import FluentUI 1.0
 
 FluScrollablePage{
-
     title: qsTr("Settings")
 
     FluFrame{
@@ -38,5 +37,29 @@ FluScrollablePage{
         }
     }
 
+    FluFrame {
+        Layout.fillWidth: true
+        Layout.topMargin: 20
+        height: 50
+        padding: 10
+        FluCheckBox {
+            text: qsTr("Sticky on Top")
+            anchors.verticalCenter: parent.verticalCenter
+            onClicked: setWindowFlags(checked)
+        }
+    }
 
+    function setWindowFlags(checked) {
+        if (checked) {
+            // 置顶的时候保留系统边框和窗口控制按钮
+            flags = Qt.Window |
+                    Qt.WindowStaysOnTopHint |
+                    Qt.WindowTitleHint |
+                    Qt.WindowSystemMenuHint |
+                    Qt.WindowCloseButtonHint |
+                    Qt.WindowMinMaxButtonsHint
+        } else {
+            flags = Qt.Window
+        }
+    }
 }
