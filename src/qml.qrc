@@ -1,7 +1,12 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>App.qml</file>
-        <file>logo.ico</file>
+        <file>qml/global/ItemsFooter.qml</file>
+        <file>qml/global/ItemsOriginal.qml</file>
+        <file>qml/global/qmldir</file>
+        <file>qml/page/home.qml</file>
+        <file>qml/page/settings.qml</file>
+        <file>qml/window/MainWindow.qml</file>
+        <file>qml/App.qml</file>
+        <file>res/images/logo.ico</file>
     </qresource>
 </RCC>

@@ -33,7 +33,7 @@ add_custom_target(Script-UpdateTranslations
 )
 
 set(PROJECT_SOURCES
-    main.cpp
+
     qml.qrc
 )
 
@@ -41,6 +41,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(${PROJECT_NAME}
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        main.cpp
     )
 else()
     add_executable(${PROJECT_NAME}
