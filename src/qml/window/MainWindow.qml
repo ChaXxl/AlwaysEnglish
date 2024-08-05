@@ -21,6 +21,7 @@ FluWindow {
         id:nav_view
         width: parent.width
         height: parent.height
+        displayMode: FluNavigationViewType.Open
         hideNavAppBar: true
         cellWidth: 200
         z:999
