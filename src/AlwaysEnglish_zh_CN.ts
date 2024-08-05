@@ -21,8 +21,8 @@
     <name>MainWindow</name>
     <message>
         <location filename="qml/window/MainWindow.qml" line="10"/>
-        <source>FluentUI</source>
-        <translation type="unfinished"></translation>
+        <source>AlwaysEnglish</source>
+        <translation type="unfinished">让输入法始终为英文状态</translation>
     </message>
 </context>
 <context>

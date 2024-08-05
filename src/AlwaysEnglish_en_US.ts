@@ -21,7 +21,7 @@
     <name>MainWindow</name>
     <message>
         <location filename="qml/window/MainWindow.qml" line="10"/>
-        <source>FluentUI</source>
+        <source>AlwaysEnglish</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
