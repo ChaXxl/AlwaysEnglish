@@ -6,7 +6,7 @@
     <message>
         <location filename="qml/global/ItemsFooter.qml" line="14"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">设置</translation>
     </message>
 </context>
 <context>
@@ -14,26 +14,7 @@
     <message>
         <location filename="qml/global/ItemsOriginal.qml" line="10"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>main</name>
-    <message>
-        <source>AlwaysEnglish</source>
-        <translation type="obsolete">AlwaysEnglish</translation>
-    </message>
-    <message>
-        <source>Welcome to FluentUI</source>
-        <translation type="obsolete">欢迎使用FluentUI</translation>
-    </message>
-    <message>
-        <source>Learn FluentUI</source>
-        <translation type="obsolete">学习FluentUI</translation>
-    </message>
-    <message>
-        <source>Author&apos;s WeChat ID: </source>
-        <translation type="obsolete">作者微信号: </translation>
+        <translation type="unfinished">首页</translation>
     </message>
 </context>
 <context>
@@ -41,27 +22,27 @@
     <message>
         <location filename="qml/page/settings.qml" line="9"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">设置</translation>
     </message>
     <message>
         <location filename="qml/page/settings.qml" line="24"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">夜间模式</translation>
     </message>
     <message>
         <location filename="qml/page/settings.qml" line="29"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">跟随系统</translation>
     </message>
     <message>
         <location filename="qml/page/settings.qml" line="29"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">浅色</translation>
     </message>
     <message>
         <location filename="qml/page/settings.qml" line="29"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">深色</translation>
     </message>
 </context>
 </TS>
