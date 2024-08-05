@@ -23,7 +23,7 @@ FluWindow {
         height: parent.height
         displayMode: FluNavigationViewType.Open
         hideNavAppBar: true
-        cellWidth: 200
+        cellWidth: 150
         z:999
 
         items: ItemsOriginal
