@@ -18,31 +18,44 @@
     </message>
 </context>
 <context>
+    <name>MainWindow</name>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="10"/>
+        <source>FluentUI</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>settings</name>
     <message>
-        <location filename="qml/page/settings.qml" line="9"/>
+        <location filename="qml/page/settings.qml" line="8"/>
         <source>Settings</source>
         <translation type="unfinished">设置</translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="24"/>
+        <location filename="qml/page/settings.qml" line="23"/>
         <source>Dark Mode</source>
         <translation type="unfinished">夜间模式</translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="29"/>
+        <location filename="qml/page/settings.qml" line="28"/>
         <source>System</source>
         <translation type="unfinished">跟随系统</translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="29"/>
+        <location filename="qml/page/settings.qml" line="28"/>
         <source>Light</source>
         <translation type="unfinished">浅色</translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="29"/>
+        <location filename="qml/page/settings.qml" line="28"/>
         <source>Dark</source>
         <translation type="unfinished">深色</translation>
+    </message>
+    <message>
+        <location filename="qml/page/settings.qml" line="46"/>
+        <source>Sticky on Top</source>
+        <translation type="unfinished">窗口置顶</translation>
     </message>
 </context>
 </TS>
