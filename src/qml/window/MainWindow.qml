@@ -7,7 +7,7 @@ import "../global"
 FluWindow {
 
     id:window
-    title: qsTr("FluentUI")
+    title: qsTr("AlwaysEnglish")
     width: 1000
     height: 668
     minimumWidth: 668
