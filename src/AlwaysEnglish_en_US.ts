@@ -33,42 +33,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="70"/>
+        <location filename="qml/page/home.qml" line="65"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="100"/>
+        <location filename="qml/page/home.qml" line="95"/>
         <source>Deactivate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="108"/>
+        <location filename="qml/page/home.qml" line="103"/>
         <source>Add an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="117"/>
+        <location filename="qml/page/home.qml" line="112"/>
         <source>select an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="146"/>
+        <location filename="qml/page/home.qml" line="141"/>
         <source>icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="157"/>
+        <location filename="qml/page/home.qml" line="152"/>
         <source>Turn on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="161"/>
+        <location filename="qml/page/home.qml" line="156"/>
         <source>Caps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="165"/>
+        <location filename="qml/page/home.qml" line="160"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>

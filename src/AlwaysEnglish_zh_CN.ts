@@ -33,44 +33,44 @@
         <translation type="unfinished">APP 设置</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="70"/>
+        <location filename="qml/page/home.qml" line="65"/>
         <source>Remove</source>
         <translation type="unfinished">移除</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="100"/>
+        <location filename="qml/page/home.qml" line="95"/>
         <source>Deactivate</source>
         <translation type="unfinished">停用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="108"/>
+        <location filename="qml/page/home.qml" line="103"/>
         <source>Add an APP</source>
         <translation type="unfinished">添加应用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="117"/>
+        <location filename="qml/page/home.qml" line="112"/>
         <source>select an APP</source>
         <translation type="unfinished">选择一个 APP</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="146"/>
+        <location filename="qml/page/home.qml" line="141"/>
         <source>icon</source>
         <translation type="unfinished">应用图标</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="157"/>
+        <location filename="qml/page/home.qml" line="152"/>
         <source>Turn on</source>
         <translation type="unfinished">启用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="161"/>
+        <location filename="qml/page/home.qml" line="156"/>
         <source>Caps</source>
         <translation type="unfinished">大小写键</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="165"/>
+        <location filename="qml/page/home.qml" line="160"/>
         <source>Options</source>
-        <translation type="unfinished">选项</translation>
+        <translation type="unfinished">操作</translation>
     </message>
 </context>
 <context>
