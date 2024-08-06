@@ -2,45 +2,37 @@
 #include <QDebug>
 
 #include "ControlInputLayout.h"
-#include <QDebug>
 
-bool ControlInputThread::m_isRunning = false;
-bool ControlInputThread::m_isCapLock = true;
 
-ControlInputThread::ControlInputThread(QObject *parent) : QThread(parent) {}
-
-void ControlInputThread::run() {
-    while (m_isRunning) {
-        emit switchToEnglish();
-        if (m_isCapLock) {
-            emit capLock();
-        }
-        QThread::msleep(200); // 避免频繁调用
-    }
+ControlInputLayout::ControlInputLayout(QObject *parent) : QObject(parent), m_isCapLock(true)
+{
+    m_timer = new QTimer(this);
+    connect(m_timer, &QTimer::timeout, this, &ControlInputLayout::onTimerTimeout);
 }
 
-void ControlInputThread::stop() {
-    m_isRunning = false;
-}
-
-ControlInputLayout::ControlInputLayout(QObject *parent)
-    : QObject(parent), m_thread(new ControlInputThread(this)) {
-    connect(m_thread, &ControlInputThread::switchToEnglish, this, &ControlInputLayout::switchToEnglish);
-    connect(m_thread, &ControlInputThread::capLock, this, &ControlInputLayout::capLock);
+ControlInputLayout::~ControlInputLayout()
+{
+    stopTask();
 }
 
 void ControlInputLayout::startTask() {
-    ControlInputThread::m_isRunning = true;
-    m_thread->start();
+    m_timer->start(300);
 }
 
 void ControlInputLayout::stopTask() {
-    ControlInputThread::m_isRunning = false;
+    m_timer->stop();
+}
+
+void ControlInputLayout::onTimerTimeout()
+{
+    switchToEnglish();
+    if (m_isCapLock) {
+        capLock();
+    }
 }
 
 void ControlInputLayout::switchToEnglish()
 {
-    qDebug() << "switchToEnglish...";
     // 根据前台窗口的句柄获取其所属线程的线程ID, 最后获取该线程的键盘布局句柄
     HKL hkl = GetKeyboardLayout(GetWindowThreadProcessId(GetForegroundWindow(), NULL));
 
@@ -54,7 +46,6 @@ void ControlInputLayout::switchToEnglish()
 
 void ControlInputLayout::capLock()
 {
-    qDebug() << "capLock...";
     // 检查大小写键是否按下, 如果没有则模拟按下并释放大小写键
     if (!(GetKeyState(VK_CAPITAL) & 0x0001))
     {
