@@ -33,53 +33,54 @@
         <translation type="unfinished">APP 设置</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="67"/>
+        <location filename="qml/page/home.qml" line="65"/>
         <source>Remove</source>
         <translation type="unfinished">移除</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="102"/>
-        <location filename="qml/page/home.qml" line="109"/>
+        <location filename="qml/page/home.qml" line="100"/>
+        <location filename="qml/page/home.qml" line="107"/>
         <source>AlwaysEnglish</source>
         <translation type="unfinished">始终为英文</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="106"/>
+        <location filename="qml/page/home.qml" line="104"/>
         <source>Stop</source>
         <translation type="unfinished">停    止</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="116"/>
+        <location filename="qml/page/home.qml" line="114"/>
         <source>Keep English All The Time</source>
         <translation type="unfinished">无论什么软件, 一直保持英文输入法（大小写键会一直按住）</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="127"/>
+        <location filename="qml/page/home.qml" line="125"/>
         <source>Add an APP</source>
         <translation type="unfinished">添加应用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="136"/>
+        <location filename="qml/page/home.qml" line="134"/>
         <source>select an APP</source>
         <translation type="unfinished">选择一个 APP</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="158"/>
+        <location filename="qml/page/home.qml" line="156"/>
         <source>icon</source>
         <translation type="unfinished">应用图标</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="169"/>
+        <location filename="qml/page/home.qml" line="167"/>
         <source>Turn on</source>
         <translation type="unfinished">启用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="173"/>
-        <source>Caps</source>
+        <location filename="qml/page/home.qml" line="171"/>
+        <source>Cap Lock</source>
+        <oldsource>Caps</oldsource>
         <translation type="unfinished">大小写键</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="177"/>
+        <location filename="qml/page/home.qml" line="175"/>
         <source>Options</source>
         <translation type="unfinished">操作</translation>
     </message>
