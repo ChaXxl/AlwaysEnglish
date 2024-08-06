@@ -117,5 +117,10 @@
         <source>Sticky on Top</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="qml/page/settings.qml" line="58"/>
+        <source>Whether turn on Cap Lock when AlwaysEnglish is on</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

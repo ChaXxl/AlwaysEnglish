@@ -51,7 +51,7 @@
     <message>
         <location filename="qml/page/home.qml" line="114"/>
         <source>Keep English All The Time</source>
-        <translation type="unfinished">无论什么软件, 一直保持英文输入法（大小写键会一直按住）</translation>
+        <translation type="unfinished">无论什么软件, 一直保持英文输入法（在设置里决定是否打开大小写键）</translation>
     </message>
     <message>
         <location filename="qml/page/home.qml" line="125"/>
@@ -116,6 +116,11 @@
         <location filename="qml/page/settings.qml" line="46"/>
         <source>Sticky on Top</source>
         <translation type="unfinished">窗口置顶</translation>
+    </message>
+    <message>
+        <location filename="qml/page/settings.qml" line="58"/>
+        <source>Whether turn on Cap Lock when AlwaysEnglish is on</source>
+        <translation type="unfinished">当一直开启英文输入法时，是否一直打开大小写键</translation>
     </message>
 </context>
 </TS>
