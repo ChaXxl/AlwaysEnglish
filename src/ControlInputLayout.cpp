@@ -1,7 +1,42 @@
 #include "ControlInputLayout.h"
 #include <QDebug>
 
-ControlInputLayout::ControlInputLayout(QObject *parent) : QObject(parent), m_isRunning(true), m_isCapLock(true) {}
+#include "ControlInputLayout.h"
+#include <QDebug>
+
+bool ControlInputThread::m_isRunning = false;
+bool ControlInputThread::m_isCapLock = true;
+
+ControlInputThread::ControlInputThread(QObject *parent) : QThread(parent) {}
+
+void ControlInputThread::run() {
+    while (m_isRunning) {
+        emit switchToEnglish();
+        if (m_isCapLock) {
+            emit capLock();
+        }
+        QThread::msleep(200); // 避免频繁调用
+    }
+}
+
+void ControlInputThread::stop() {
+    m_isRunning = false;
+}
+
+ControlInputLayout::ControlInputLayout(QObject *parent)
+    : QObject(parent), m_thread(new ControlInputThread(this)) {
+    connect(m_thread, &ControlInputThread::switchToEnglish, this, &ControlInputLayout::switchToEnglish);
+    connect(m_thread, &ControlInputThread::capLock, this, &ControlInputLayout::capLock);
+}
+
+void ControlInputLayout::startTask() {
+    ControlInputThread::m_isRunning = true;
+    m_thread->start();
+}
+
+void ControlInputLayout::stopTask() {
+    ControlInputThread::m_isRunning = false;
+}
 
 void ControlInputLayout::switchToEnglish()
 {
@@ -28,17 +63,3 @@ void ControlInputLayout::capLock()
     }
 }
 
-void ControlInputLayout::startTask()
-{
-    while (m_isRunning) {
-        switchToEnglish();
-        if (m_isCapLock) {
-            capLock();
-        }
-    }
-}
-
-void ControlInputLayout::stopTask()
-{
-    m_isRunning = false;
-}
