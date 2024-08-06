@@ -177,7 +177,7 @@ FluContentPage {
                         var fileName = filePath.split("/").pop();
                         const extension = fileName.split(".").pop();
 
-                        if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
+                        if (extension !== "exe" && extension !== "link") {
                             return;
                         }
 
