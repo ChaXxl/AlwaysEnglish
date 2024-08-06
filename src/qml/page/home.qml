@@ -17,9 +17,8 @@ FluContentPage {
         Item{
             FluClip{
                 anchors.centerIn: parent
-                width: 40
-                height: 40
-                radius: [20,20,20,20]
+                width: 30
+                height: 30
                 Image{
                     anchors.fill: parent
                     source: options && options.icon ? options.icon : ""
