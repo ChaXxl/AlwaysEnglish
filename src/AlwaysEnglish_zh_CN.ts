@@ -68,22 +68,22 @@
         <translation type="unfinished">选择一个 APP</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="158"/>
+        <location filename="qml/page/home.qml" line="150"/>
         <source>icon</source>
         <translation type="unfinished">应用图标</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="169"/>
+        <location filename="qml/page/home.qml" line="161"/>
         <source>Turn on</source>
         <translation type="unfinished">启用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="173"/>
+        <location filename="qml/page/home.qml" line="165"/>
         <source>Caps</source>
         <translation type="unfinished">大小写键</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="177"/>
+        <location filename="qml/page/home.qml" line="169"/>
         <source>Options</source>
         <translation type="unfinished">操作</translation>
     </message>
