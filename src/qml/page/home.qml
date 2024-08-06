@@ -130,43 +130,9 @@ FluContentPage {
         fileMode: FileDialog.OpenFile
         nameFilters: ["exe Shortcuts(*.exe *.link *.lnk)"]
         onAccepted: {
+            // 文件的路径
             var filePath = fileDialog.file.toString();
-            // 分割路径提取带扩展名的文件名
-            var fileName = filePath.split("/").pop();
-
-            // 获取扩展名
-            const extension = fileName.split(".").pop();
-
-            // 如果不是 .exe 或者 快捷方式则跳过
-            if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
-                return;
-            }
-
-            // 没有扩展名的文件名
-            const fileNameWithoutExtension = fileName.split(".")[0];
-
-            // 提取不带 file:/// 的路径
-            filePath = filePath.replace(/^file:\/{3}/, "");
-            var exePath, fileIconBase64;
-
-            if (extension === "link" || extension === "lnk") {
-                // 根据快捷方式的路径拿到快捷方式所指向的 exe 路径
-                exePath = LnkResolver.resolveLnk(filePath);
-            } else {
-                exePath = filePath;
-            }
-
-            // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
-            fileIconBase64 = iconProvider.getExeIcon(exePath);
-
-            table_view.appendRow({
-                icon: table_view.customItem(com_ico,{icon: fileIconBase64}),
-                name: fileNameWithoutExtension,
-                turnon: table_view.customItem(com_column_turn_on),
-                Caps: table_view.customItem(com_column_caps),
-                action: table_view.customItem(com_action),
-                _key:FluTools.uuid()
-            })
+            addDataToRow(filePath);
         }
     }
 
@@ -217,45 +183,48 @@ FluContentPage {
                 for (var i = 0; i < drop.urls.length; i++) {
                     // 文件的路径
                     var filePath = drop.urls[i].toString();
-
-                    // 分割路径提取带扩展名的文件名
-                    var fileName = filePath.split("/").pop();
-
-                    // 获取扩展名
-                    const extension = fileName.split(".").pop();
-
-                    // 如果不是 .exe 或者 快捷方式则跳过
-                    if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
-                        continue;
-                    }
-
-                    // 没有扩展名的文件名
-                    const fileNameWithoutExtension = fileName.split(".")[0];
-
-                    // 提取不带 file:/// 的路径
-                    filePath = filePath.replace(/^file:\/{3}/, "");
-                    var exePath, fileIconBase64;
-
-                    if (extension === "link" || extension === "lnk") {
-                        // 根据快捷方式的路径拿到快捷方式所指向的 exe 路径
-                        exePath = LnkResolver.resolveLnk(filePath);
-                    } else {
-                        exePath = filePath;
-                    }
-
-                    // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
-                    fileIconBase64 = iconProvider.getExeIcon(exePath);
-
-                    table_view.appendRow({
-                        icon: table_view.customItem(com_ico,{icon: fileIconBase64}),
-                        name: fileNameWithoutExtension,
-                        turnon: table_view.customItem(com_column_turn_on),
-                        Caps: table_view.customItem(com_column_caps),
-                        action: table_view.customItem(com_action),
-                        _key:FluTools.uuid()
-                    })
+                    addDataToRow(filePath);
                 }
             }
         }
+    }
+
+    function addDataToRow(filePath) {
+        // 分割路径提取带扩展名的文件名
+        var fileName = filePath.split("/").pop();
+
+        // 获取扩展名
+        const extension = fileName.split(".").pop();
+
+        // 如果不是 .exe 或者 快捷方式则跳过
+        if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
+            return;
+        }
+
+        // 没有扩展名的文件名
+        const fileNameWithoutExtension = fileName.split(".")[0];
+
+        // 提取不带 file:/// 的路径
+        filePath = filePath.replace(/^file:\/{3}/, "");
+        var exePath, fileIconBase64;
+
+        if (extension === "link" || extension === "lnk") {
+            // 根据快捷方式的路径拿到快捷方式所指向的 exe 路径
+            exePath = LnkResolver.resolveLnk(filePath);
+        } else {
+            exePath = filePath;
+        }
+
+        // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
+        fileIconBase64 = iconProvider.getExeIcon(exePath);
+
+        table_view.appendRow({
+            icon: table_view.customItem(com_ico,{icon: fileIconBase64}),
+            name: fileNameWithoutExtension,
+            turnon: table_view.customItem(com_column_turn_on),
+            Caps: table_view.customItem(com_column_caps),
+            action: table_view.customItem(com_action),
+            _key:FluTools.uuid()
+        })
     }
 }
