@@ -148,6 +148,27 @@ FluContentPage {
                 frozen: true
             }
         ]
+
+        DropArea {
+            anchors.fill: parent
+            onDropped: function (drop) {
+                if (drop.hasUrls) {
+                    for (var i = 0; i < drop.urls.length; i++) {
+                        var filePath = drop.urls[i];
+                        var fileName = filePath.toString().split("/").pop();
+
+                        table_view.appendRow({
+                            // icon:
+                            name: fileName,
+                            turnon: table_view.customItem(com_column_turn_on),
+                            Caps: table_view.customItem(com_column_caps),
+                            action: table_view.customItem(com_action),
+                            _key:FluTools.uuid()
+                        })
+                    }
+                }
+            }
+        }
     }
 
     function getObject(){
@@ -162,9 +183,9 @@ FluContentPage {
             return avatars[randomIndex];
         }
         return {
-            // icon:table_view.customItem(com_ico,{avatar:getAvatar()}),
+            // icon: table_view.customItem(com_ico,{avatar:getAvatar()}),
             Caps: table_view.customItem(com_column_caps),
-            name: getRandomName(),
+            // name:
             turnon: table_view.customItem(com_column_turn_on),
             action: table_view.customItem(com_action),
             _minimumHeight: 50,
