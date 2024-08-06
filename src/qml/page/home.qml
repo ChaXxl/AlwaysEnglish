@@ -171,30 +171,32 @@ FluContentPage {
         DropArea {
             anchors.fill: parent
             onDropped: function (drop) {
-                if (drop.hasUrls) {
-                    for (var i = 0; i < drop.urls.length; i++) {
-                        var filePath = drop.urls[i].toString();
-                        var fileName = filePath.split("/").pop();
-                        const extension = fileName.split(".").pop();
+                if (!drop.hasUrls) {
+                    return;
+                }
 
-                        if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
-                            continue;
-                        }
+                for (var i = 0; i < drop.urls.length; i++) {
+                    var filePath = drop.urls[i].toString();
+                    var fileName = filePath.split("/").pop();
+                    const extension = fileName.split(".").pop();
 
-                        // var fileIcon = iconProvider.iconForFile(filePath);
-                        filePath = filePath.replace(/^file:\/{3}/, "");
-                        console.log(filePath);
-                        // var resolvedPath = LnkResolver.resolveLnk(filePath);
-
-                        table_view.appendRow({
-                            // icon: table_view.customItem(com_ico,{icon: fileIcon}),
-                            name: fileName,
-                            turnon: table_view.customItem(com_column_turn_on),
-                            Caps: table_view.customItem(com_column_caps),
-                            action: table_view.customItem(com_action),
-                            _key:FluTools.uuid()
-                        })
+                    if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
+                        continue;
                     }
+
+                    // var fileIcon = iconProvider.iconForFile(filePath);
+                    filePath = filePath.replace(/^file:\/{3}/, "");
+                    console.log(filePath);
+                    // var resolvedPath = LnkResolver.resolveLnk(filePath);
+
+                    table_view.appendRow({
+                        // icon: table_view.customItem(com_ico,{icon: fileIcon}),
+                        name: fileName,
+                        turnon: table_view.customItem(com_column_turn_on),
+                        Caps: table_view.customItem(com_column_caps),
+                        action: table_view.customItem(com_action),
+                        _key:FluTools.uuid()
+                    })
                 }
             }
         }
