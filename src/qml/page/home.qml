@@ -173,11 +173,14 @@ FluContentPage {
                 for (var i = 0; i < drop.urls.length; i++) {
                     var filePath = drop.urls[i].toString();
                     var fileName = filePath.split("/").pop();
+
                     const extension = fileName.split(".").pop();
 
                     if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
                         continue;
                     }
+
+                    const fileNameWithoutExtension = fileName.split(".")[0];
 
                     filePath = filePath.replace(/^file:\/{3}/, "");
                     var resolvedPath = LnkResolver.resolveLnk(filePath);
@@ -186,7 +189,7 @@ FluContentPage {
 
                     table_view.appendRow({
                         icon: table_view.customItem(com_ico,{icon: fileIcon}),
-                        name: fileName,
+                        name: fileNameWithoutExtension,
                         turnon: table_view.customItem(com_column_turn_on),
                         Caps: table_view.customItem(com_column_caps),
                         action: table_view.customItem(com_action),
