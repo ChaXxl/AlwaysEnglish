@@ -201,26 +201,4 @@ FluContentPage {
             }
         }
     }
-
-    function getObject(){
-        var names = ["Photoshop", "Microsoft Word", "Moonlight", "SunloginClient"];
-        function getRandomName(){
-            var randomIndex = Math.floor(Math.random() * names.length);
-            return names[randomIndex];
-        }
-        var avatars = ["qrc:/example/res/svg/avatar_1.svg", "qrc:/example/res/svg/avatar_2.svg"];
-        function getAvatar(){
-            var randomIndex = Math.floor(Math.random() * avatars.length);
-            return avatars[randomIndex];
-        }
-        return {
-            // icon: table_view.customItem(com_ico,{icon:getAvatar()}),
-            Caps: table_view.customItem(com_column_caps),
-            // name:
-            turnon: table_view.customItem(com_column_turn_on),
-            action: table_view.customItem(com_action),
-            _minimumHeight: 50,
-            _key:FluTools.uuid()
-        }
-    }
 }
