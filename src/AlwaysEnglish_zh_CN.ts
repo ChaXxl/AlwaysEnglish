@@ -33,42 +33,42 @@
         <translation type="unfinished">APP 设置</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="65"/>
+        <location filename="qml/page/home.qml" line="64"/>
         <source>Remove</source>
         <translation type="unfinished">移除</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="95"/>
+        <location filename="qml/page/home.qml" line="94"/>
         <source>Deactivate</source>
         <translation type="unfinished">停用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="103"/>
+        <location filename="qml/page/home.qml" line="102"/>
         <source>Add an APP</source>
         <translation type="unfinished">添加应用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="112"/>
+        <location filename="qml/page/home.qml" line="111"/>
         <source>select an APP</source>
         <translation type="unfinished">选择一个 APP</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="141"/>
+        <location filename="qml/page/home.qml" line="140"/>
         <source>icon</source>
         <translation type="unfinished">应用图标</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="152"/>
+        <location filename="qml/page/home.qml" line="151"/>
         <source>Turn on</source>
         <translation type="unfinished">启用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="156"/>
+        <location filename="qml/page/home.qml" line="155"/>
         <source>Caps</source>
         <translation type="unfinished">大小写键</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="160"/>
+        <location filename="qml/page/home.qml" line="159"/>
         <source>Options</source>
         <translation type="unfinished">操作</translation>
     </message>
