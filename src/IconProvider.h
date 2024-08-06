@@ -14,5 +14,5 @@ private:
 public:
     SINGLETON(IconProvider)
 
-    Q_INVOKABLE QImage getExeIcon(const QString &filePath);
+    Q_INVOKABLE QString getExeIcon(const QString &filePath);
 };
