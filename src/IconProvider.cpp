@@ -5,7 +5,10 @@
 
 IconProvider::IconProvider(QObject *parent) : QObject(parent) {}
 
-QIcon IconProvider::iconForFile(const QString &filePath) {
+QImage IconProvider::getExeIcon(const QString &filePath) {
     QFileIconProvider iconProvider;
-    return iconProvider.icon(QFileInfo(filePath));
+    QFileInfo fileInfo(filePath);
+    QIcon icon = iconProvider.icon(fileInfo);
+    QPixmap pixmap = icon.pixmap(80, 80);
+    return pixmap.toImage();
 }

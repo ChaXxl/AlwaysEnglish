@@ -1,8 +1,7 @@
 #pragma once
 
 #include <QObject>
-#include <QIcon>
-#include <QUrl>
+#include <QImage>
 #include "singleton.h"
 
 class IconProvider : public QObject
@@ -15,5 +14,5 @@ private:
 public:
     SINGLETON(IconProvider)
 
-    Q_INVOKABLE QIcon iconForFile(const QString &filePath);
+    Q_INVOKABLE QImage getExeIcon(const QString &filePath);
 };
