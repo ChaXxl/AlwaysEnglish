@@ -42,6 +42,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         main.cpp
+        IconProvider.h IconProvider.cpp
+        singleton.h
+        LnkResolver.h LnkResolver.cpp
     )
 else()
     add_executable(${PROJECT_NAME}

@@ -116,7 +116,7 @@ FluContentPage {
         id: fileDialog
         title: qsTr("select an APP")
         fileMode: FileDialog.OpenFile
-        nameFilters: ["exe Shortcuts(*.exe *.link)"]
+        nameFilters: ["exe Shortcuts(*.exe *.link *.lnk)"]
         onAccepted: {
             var filePath = fileDialog.file.toString();
             var fileName = filePath.split("/").pop();
@@ -177,12 +177,17 @@ FluContentPage {
                         var fileName = filePath.split("/").pop();
                         const extension = fileName.split(".").pop();
 
-                        if (extension !== "exe" && extension !== "link") {
+                        if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
                             return;
                         }
 
+                        // var fileIcon = iconProvider.iconForFile(filePath);
+                        filePath = filePath.replace(/^file:\/{3}/, "");
+                        console.log(filePath);
+                        // var resolvedPath = LnkResolver.resolveLnk(filePath);
+
                         table_view.appendRow({
-                            // icon:
+                            // icon: table_view.customItem(com_ico,{icon: fileIcon}),
                             name: fileName,
                             turnon: table_view.customItem(com_column_turn_on),
                             Caps: table_view.customItem(com_column_caps),
@@ -207,7 +212,7 @@ FluContentPage {
             return avatars[randomIndex];
         }
         return {
-            // icon: table_view.customItem(com_ico,{avatar:getAvatar()}),
+            // icon: table_view.customItem(com_ico,{icon:getAvatar()}),
             Caps: table_view.customItem(com_column_caps),
             // name:
             turnon: table_view.customItem(com_column_turn_on),

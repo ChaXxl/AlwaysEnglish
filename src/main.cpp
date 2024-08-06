@@ -1,6 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 #include <QTranslator>
+#include "IconProvider.h"
+#include "LnkResolver.h"
 
 
 int main(int argc, char *argv[])
@@ -21,7 +24,8 @@ int main(int argc, char *argv[])
     }
 
     QQmlApplicationEngine engine;
-
+    engine.rootContext()->setContextProperty("iconProvider", IconProvider::getInstance());
+    engine.rootContext()->setContextProperty("LnkResolver", LnkResolver::getInstance());
 
     const QUrl url(QStringLiteral("qrc:/qml/App.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
