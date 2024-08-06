@@ -171,20 +171,30 @@ FluContentPage {
                 }
 
                 for (var i = 0; i < drop.urls.length; i++) {
+                    // 文件的路径
                     var filePath = drop.urls[i].toString();
+
+                    // 分割路径提取带扩展名的文件名
                     var fileName = filePath.split("/").pop();
 
+                    // 获取扩展名
                     const extension = fileName.split(".").pop();
 
+                    // 如果不是 .exe 或者 快捷方式则跳过
                     if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
                         continue;
                     }
 
+                    // 没有扩展名的文件名
                     const fileNameWithoutExtension = fileName.split(".")[0];
 
+                    // 提取不带 file:/// 的路径
                     filePath = filePath.replace(/^file:\/{3}/, "");
+
+                    // 根据快捷方式的路径拿到快捷方式所指向的 exe 路径
                     var resolvedPath = LnkResolver.resolveLnk(filePath);
 
+                    // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
                     var fileIcon = iconProvider.getExeIcon(resolvedPath);
 
                     table_view.appendRow({
