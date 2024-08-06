@@ -49,6 +49,18 @@ FluScrollablePage{
         }
     }
 
+    FluFrame {
+        Layout.fillWidth: true
+        Layout.topMargin: 20
+        height: 50
+        padding: 10
+        FluCheckBox {
+            text: qsTr("Whether turn on Cap Lock when AlwaysEnglish is on")
+            anchors.verticalCenter: parent.verticalCenter
+            // onClicked:
+        }
+    }
+
     function setWindowFlags(checked) {
         if (checked) {
             // 置顶的时候保留系统边框和窗口控制按钮
