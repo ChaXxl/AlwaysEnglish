@@ -168,7 +168,7 @@ FluContentPage {
                 dataIndex: 'turnon',
             },
             {
-                title: qsTr("Caps"),
+                title: qsTr("Cap Lock"),
                 dataIndex: 'Caps',
             },
             {
