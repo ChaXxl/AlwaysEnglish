@@ -8,7 +8,7 @@ FluWindow {
 
     id:window
     title: qsTr("AlwaysEnglish")
-    width: 1000
+    width: 860
     height: 668
     minimumWidth: 668
     minimumHeight: 320
