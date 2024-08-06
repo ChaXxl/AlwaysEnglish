@@ -11,6 +11,9 @@ FluContentPage {
 
     property bool selectedAll: true
 
+    // 使用 Set 来存储表格的软件路径
+    property var existingFilePath: new Set()
+
     // 显示图标
     Component{
         id:com_ico
@@ -63,8 +66,12 @@ FluContentPage {
                 FluButton {
                     text: qsTr("Remove")
                     onClicked: {
+                        // 从 Set 中移除对应行的 APP
+                        var exePath = table_view.getRow(row).path
+                        existingFilePath.delete(exePath)
+
                         table_view.closeEditor()
-                        table_view.removeRow(row)
+                        table_view.removeRow(row)         
                     }
                 }
             }
@@ -215,11 +222,20 @@ FluContentPage {
             exePath = filePath;
         }
 
+        // 判断表格是否已有该软件, 若已有则不重复添加
+        if (existingFilePath.has(exePath)) {
+            return;
+        }
+
+        // 添加到 Set 中
+        existingFilePath.add(exePath);
+
         // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
         fileIconBase64 = iconProvider.getExeIcon(exePath);
 
         table_view.appendRow({
             icon: table_view.customItem(com_ico,{icon: fileIconBase64}),
+            path: exePath,
             name: fileNameWithoutExtension,
             turnon: table_view.customItem(com_column_turn_on),
             Caps: table_view.customItem(com_column_caps),
