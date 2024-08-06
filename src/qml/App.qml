@@ -8,7 +8,6 @@ FluLauncher {
     id: app
 
     Component.onCompleted: {
-        // FluApp.init(app, Qt.locale(TranslateHelper.current))
         FluApp.init(app)
 
         FluApp.useSystemAppBar = true
