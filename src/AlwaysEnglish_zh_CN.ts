@@ -28,47 +28,47 @@
 <context>
     <name>home</name>
     <message>
-        <location filename="qml/page/home.qml" line="10"/>
+        <location filename="qml/page/home.qml" line="11"/>
         <source>App-specific settings</source>
         <translation type="unfinished">APP 设置</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="70"/>
+        <location filename="qml/page/home.qml" line="71"/>
         <source>Remove</source>
         <translation type="unfinished">移除</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="100"/>
+        <location filename="qml/page/home.qml" line="101"/>
         <source>Deactivate</source>
         <translation type="unfinished">停用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="108"/>
+        <location filename="qml/page/home.qml" line="109"/>
         <source>Add an APP</source>
         <translation type="unfinished">添加应用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="117"/>
+        <location filename="qml/page/home.qml" line="118"/>
         <source>select an APP</source>
         <translation type="unfinished">选择一个 APP</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="145"/>
+        <location filename="qml/page/home.qml" line="147"/>
         <source>icon</source>
         <translation type="unfinished">应用图标</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="156"/>
+        <location filename="qml/page/home.qml" line="158"/>
         <source>Turn on</source>
         <translation type="unfinished">启用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="160"/>
+        <location filename="qml/page/home.qml" line="162"/>
         <source>Caps</source>
         <translation type="unfinished">大小写键</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="164"/>
+        <location filename="qml/page/home.qml" line="166"/>
         <source>Options</source>
         <translation type="unfinished">选项</translation>
     </message>
