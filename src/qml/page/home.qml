@@ -184,13 +184,13 @@ FluContentPage {
                         continue;
                     }
 
-                    // var fileIcon = iconProvider.iconForFile(filePath);
                     filePath = filePath.replace(/^file:\/{3}/, "");
-                    console.log(filePath);
-                    // var resolvedPath = LnkResolver.resolveLnk(filePath);
+                    var resolvedPath = LnkResolver.resolveLnk(filePath);
+
+                    var fileIcon = iconProvider.getExeIcon(resolvedPath);
 
                     table_view.appendRow({
-                        // icon: table_view.customItem(com_ico,{icon: fileIcon}),
+                        icon: table_view.customItem(com_ico,{icon: fileIcon}),
                         name: fileName,
                         turnon: table_view.customItem(com_column_turn_on),
                         Caps: table_view.customItem(com_column_caps),
