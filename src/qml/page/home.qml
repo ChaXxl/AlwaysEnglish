@@ -117,11 +117,13 @@ FluContentPage {
 
                 onClicked: {
                     table_view.enabled = !checked
+                    btn_addApp.enabled = !btn_addApp.enabled
                 }
             }
 
             // 添加
             FluButton{
+                id: btn_addApp
                 text: qsTr("Add an APP")
                 onClicked: fileDialog.open()
             }
