@@ -116,6 +116,7 @@ FluContentPage {
         id: fileDialog
         title: qsTr("select an APP")
         fileMode: FileDialog.OpenFile
+        nameFilters: ["exe Shortcuts(*.exe *.link)"]
         onAccepted: {
             var filePath = fileDialog.file.toString();
             var fileName = filePath.split("/").pop();
@@ -174,6 +175,11 @@ FluContentPage {
                     for (var i = 0; i < drop.urls.length; i++) {
                         var filePath = drop.urls[i];
                         var fileName = filePath.toString().split("/").pop();
+                        const extension = fileName.split(".").pop();
+
+                        if (extension !== "exe" && extension !== "link") {
+                            return;
+                        }
 
                         table_view.appendRow({
                             // icon:
