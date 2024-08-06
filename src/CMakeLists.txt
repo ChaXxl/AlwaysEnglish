@@ -45,6 +45,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         IconProvider.h IconProvider.cpp
         singleton.h
         LnkResolver.h LnkResolver.cpp
+        ControlInputLayout.h ControlInputLayout.cpp
     )
 else()
     add_executable(${PROJECT_NAME}
