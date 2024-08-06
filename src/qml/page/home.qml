@@ -23,8 +23,8 @@ FluContentPage {
                 Image{
                     anchors.fill: parent
                     source: {
-                        if(options && options.avatar){
-                            return options.avatar
+                        if(options && options.icon){
+                            return options.icon
                         }
                         return ""
                     }
@@ -173,8 +173,8 @@ FluContentPage {
             onDropped: function (drop) {
                 if (drop.hasUrls) {
                     for (var i = 0; i < drop.urls.length; i++) {
-                        var filePath = drop.urls[i];
-                        var fileName = filePath.toString().split("/").pop();
+                        var filePath = drop.urls[i].toString();
+                        var fileName = filePath.split("/").pop();
                         const extension = fileName.split(".").pop();
 
                         if (extension !== "exe" && extension !== "link") {
