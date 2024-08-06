@@ -178,7 +178,7 @@ FluContentPage {
                         const extension = fileName.split(".").pop();
 
                         if (extension !== "exe" && extension !== "link" && extension !== "lnk") {
-                            return;
+                            continue;
                         }
 
                         // var fileIcon = iconProvider.iconForFile(filePath);
