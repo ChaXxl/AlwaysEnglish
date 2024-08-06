@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Qt.labs.platform
 import FluentUI 1.0
 
 FluContentPage {
@@ -105,10 +106,27 @@ FluContentPage {
             // 添加
             FluButton{
                 text: qsTr("Add an APP")
-                onClicked: {
-                    table_view.appendRow(getObject())
-                }
+                onClicked: fileDialog.open()
             }
+        }
+    }
+
+    // APP 选择对话框
+    FileDialog {
+        id: fileDialog
+        title: qsTr("select an APP")
+        fileMode: FileDialog.OpenFile
+        onAccepted: {
+            var filePath = fileDialog.file.toString();
+            var fileName = filePath.split("/").pop();
+            table_view.appendRow({
+                // icon:
+                name: fileName,
+                turnon: table_view.customItem(com_column_turn_on),
+                Caps: table_view.customItem(com_column_caps),
+                action: table_view.customItem(com_action),
+                _key:FluTools.uuid()
+            })
         }
     }
 
