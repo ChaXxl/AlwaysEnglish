@@ -89,9 +89,27 @@ FluContentPage {
                 verticalCenter: parent.verticalCenter
             }
 
-            // 停用
+            // 是否一直启动
             FluToggleButton {
-                text: qsTr("Deactivate")
+                id: btn_AlwaysEnglish
+                text: qsTr("AlwaysEnglish")
+
+                normalColor: {
+                    if(checked){
+                        btn_AlwaysEnglish.text = qsTr("Stop")
+                        return Qt.rgba(255, 0, 0, 1)
+                    }else{
+                        btn_AlwaysEnglish.text = qsTr("AlwaysEnglish")
+                        return FluTheme.dark ? Qt.rgba(62/255,62/255,62/255,1) : Qt.rgba(254/255,254/255,254/255,1)
+                    }
+                }
+
+                FluTooltip {
+                    visible: btn_AlwaysEnglish.hovered
+                    text: qsTr("Keep English All The Time")
+                    delay: 400
+                }
+
                 onClicked: {
                     table_view.enabled = !checked
                 }
