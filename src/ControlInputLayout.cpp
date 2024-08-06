@@ -53,4 +53,3 @@ void ControlInputLayout::capLock()
         keybd_event(VK_CAPITAL, 0x3a, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
     }
 }
-

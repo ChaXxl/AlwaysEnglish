@@ -29,4 +29,3 @@ public:
 private slots:
     void onTimerTimeout();
 };
-
