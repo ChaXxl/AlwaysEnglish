@@ -189,15 +189,20 @@ FluContentPage {
 
                     // 提取不带 file:/// 的路径
                     filePath = filePath.replace(/^file:\/{3}/, "");
+                    var exePath, fileIconBase64;
 
-                    // 根据快捷方式的路径拿到快捷方式所指向的 exe 路径
-                    var resolvedPath = LnkResolver.resolveLnk(filePath);
+                    if (extension === "link" || extension === "lnk") {
+                        // 根据快捷方式的路径拿到快捷方式所指向的 exe 路径
+                        exePath = LnkResolver.resolveLnk(filePath);
+                    } else {
+                        exePath = filePath;
+                    }
 
                     // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
-                    var fileIcon = iconProvider.getExeIcon(resolvedPath);
+                    fileIconBase64 = iconProvider.getExeIcon(exePath);
 
                     table_view.appendRow({
-                        icon: table_view.customItem(com_ico,{icon: fileIcon}),
+                        icon: table_view.customItem(com_ico,{icon: fileIconBase64}),
                         name: fileNameWithoutExtension,
                         turnon: table_view.customItem(com_column_turn_on),
                         Caps: table_view.customItem(com_column_caps),
