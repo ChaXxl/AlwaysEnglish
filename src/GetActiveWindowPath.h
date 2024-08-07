@@ -1,5 +1,6 @@
 #pragma once
 #include <QObject>
+#include <Windows.h>
 #include "singleton.h"
 
 class GetActiveWindowPath : public QObject
