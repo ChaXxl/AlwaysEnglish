@@ -131,7 +131,7 @@ FluContentPage {
                 normalColor: {
                     if(checked){
                         btn_AlwaysEnglish.text = qsTr("Stop")
-                        return Qt.rgba(255, 0, 0, 1)
+                        return Qt.rgba(25, 20, 150, 1)
                     }else{
                         btn_AlwaysEnglish.text = qsTr("AlwaysEnglish")
                         return FluTheme.dark ? Qt.rgba(62/255,62/255,62/255,1) : Qt.rgba(254/255,254/255,254/255,1)
