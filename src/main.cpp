@@ -7,6 +7,7 @@
 #include "IconProvider.h"
 #include "LnkResolver.h"
 #include "ControlInputLayout.h"
+#include "GetActiveWindowPath.h"
 
 int main(int argc, char *argv[])
 {
@@ -29,6 +30,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("iconProvider", IconProvider::getInstance());
     engine.rootContext()->setContextProperty("LnkResolver", LnkResolver::getInstance());
     engine.rootContext()->setContextProperty("ControlInputLayout", ControlInputLayout::getInstance());
+     engine.rootContext()->setContextProperty("GetActiveWindowPath", GetActiveWindowPath::getInstance());
 
     const QUrl url(QStringLiteral("qrc:/qml/App.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,

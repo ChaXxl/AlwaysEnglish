@@ -1,8 +1,4 @@
 #include "ControlInputLayout.h"
-#include <QDebug>
-
-#include "ControlInputLayout.h"
-
 
 ControlInputLayout::ControlInputLayout(QObject *parent) : QObject(parent), m_isCapLock(true)
 {

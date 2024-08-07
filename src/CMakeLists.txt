@@ -46,6 +46,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         singleton.h
         LnkResolver.h LnkResolver.cpp
         ControlInputLayout.h ControlInputLayout.cpp
+        GetActiveWindowPath.h GetActiveWindowPath.cpp
     )
 else()
     add_executable(${PROJECT_NAME}

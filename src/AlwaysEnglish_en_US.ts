@@ -54,33 +54,33 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="132"/>
+        <location filename="qml/page/home.qml" line="133"/>
         <source>Add an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="141"/>
+        <location filename="qml/page/home.qml" line="142"/>
         <source>select an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="163"/>
+        <location filename="qml/page/home.qml" line="164"/>
         <source>icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="174"/>
+        <location filename="qml/page/home.qml" line="175"/>
         <source>Turn on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="178"/>
+        <location filename="qml/page/home.qml" line="179"/>
         <source>Cap Lock</source>
         <oldsource>Caps</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="182"/>
+        <location filename="qml/page/home.qml" line="183"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
