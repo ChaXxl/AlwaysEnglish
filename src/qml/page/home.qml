@@ -38,7 +38,7 @@ FluContentPage {
             RowLayout {
                 anchors.centerIn: parent
                 FluToggleSwitch {
-
+                    checked: true
                 }
             }
         }
@@ -51,7 +51,7 @@ FluContentPage {
             RowLayout {
                 anchors.centerIn: parent
                 FluToggleSwitch {
-
+                    checked: true
                 }
             }
         }
