@@ -8,6 +8,9 @@ FluContentPage {
 
     property bool isChecked: false
 
+    // 控制表格是否能拖拽
+    property bool dragEnabled: true
+
     id:root
     title: qsTr("App-specific settings")
 
@@ -89,6 +92,7 @@ FluContentPage {
 
         onClicked:{
             isChecked = !isChecked
+            dragEnabled = !dragEnabled
 
             if (isChecked) {
                 myBtn.text = qsTr("Stop")
@@ -219,6 +223,10 @@ FluContentPage {
         DropArea {
             anchors.fill: parent
             onDropped: function (drop) {
+                if (!dragEnabled) {
+                    return;
+                }
+
                 if (!drop.hasUrls) {
                     return;
                 }
@@ -233,6 +241,10 @@ FluContentPage {
     }
 
     function addDataToRow(filePath) {
+        if (!dragEnabled) {
+            return;
+        }
+
         // 分割路径提取带扩展名的文件名
         var fileName = filePath.split("/").pop();
 
