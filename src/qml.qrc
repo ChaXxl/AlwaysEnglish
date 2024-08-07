@@ -8,5 +8,7 @@
         <file>qml/window/MainWindow.qml</file>
         <file>qml/App.qml</file>
         <file>res/images/logo.ico</file>
+        <file>res/images/start.png</file>
+        <file>res/images/stop.png</file>
     </qresource>
 </RCC>
