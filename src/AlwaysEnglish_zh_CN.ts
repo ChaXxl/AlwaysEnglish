@@ -67,33 +67,33 @@
         <translation type="unfinished">无论什么软件, 一直保持英文输入法（在设置里决定是否打开大小写键）</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="161"/>
+        <location filename="qml/page/home.qml" line="164"/>
         <source>Add an APP</source>
         <translation type="unfinished">添加应用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="170"/>
+        <location filename="qml/page/home.qml" line="173"/>
         <source>select an APP</source>
         <translation type="unfinished">选择一个 APP</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="192"/>
+        <location filename="qml/page/home.qml" line="195"/>
         <source>icon</source>
         <translation type="unfinished">应用图标</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="203"/>
+        <location filename="qml/page/home.qml" line="206"/>
         <source>Turn on</source>
         <translation type="unfinished">启用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="207"/>
+        <location filename="qml/page/home.qml" line="210"/>
         <source>Cap Lock</source>
         <oldsource>Caps</oldsource>
         <translation type="unfinished">大小写键</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="211"/>
+        <location filename="qml/page/home.qml" line="214"/>
         <source>Options</source>
         <translation type="unfinished">操作</translation>
     </message>

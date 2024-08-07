@@ -67,32 +67,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="161"/>
+        <location filename="qml/page/home.qml" line="164"/>
         <source>Add an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="170"/>
+        <location filename="qml/page/home.qml" line="173"/>
         <source>select an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="192"/>
+        <location filename="qml/page/home.qml" line="195"/>
         <source>icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="203"/>
+        <location filename="qml/page/home.qml" line="206"/>
         <source>Turn on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="207"/>
+        <location filename="qml/page/home.qml" line="210"/>
         <source>Cap Lock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="211"/>
+        <location filename="qml/page/home.qml" line="214"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
