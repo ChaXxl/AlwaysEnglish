@@ -78,12 +78,35 @@ FluContentPage {
         }
     }
 
+    FluIconButton{
+        id: myBtn
+
+        iconDelegate: Image {
+            source: isChecked ? "qrc:/res/images/start.png" : "qrc:/res/images/stop.png"
+        }
+
+        text: !isChecked ? qsTr("Start") : qsTr("Stop")
+
+        onClicked:{
+            isChecked = !isChecked
+
+            if (isChecked) {
+                myBtn.text = qsTr("Stop");
+
+                showSuccess(qsTr("Start Successfully"))
+            } else {
+                myBtn.text = qsTr("Start");
+            }
+        }
+    }
+
     FluFrame{
         id:layout_controls
         anchors{
             left: parent.left
             right: parent.right
             top: parent.top
+            leftMargin: 80
             topMargin: 20
         }
         height: 50
@@ -96,25 +119,7 @@ FluContentPage {
                 verticalCenter: parent.verticalCenter
             }
 
-            FluIconButton{
-                id: myBtn
 
-                iconDelegate: Image {
-                    sourceSize: Qt.size(30, 30)
-                    source: isChecked ? "qrc:/res/images/stop.png" : "qrc:/res/images/start.png"
-                }
-
-                onClicked:{
-                    console.log(isChecked)
-                    if (isChecked) {
-                        // TODO
-                    } else {
-                        // TODO
-                    }
-
-                    isChecked = !isChecked
-                }
-            }
 
             // 是否一直启动
             FluToggleButton {
