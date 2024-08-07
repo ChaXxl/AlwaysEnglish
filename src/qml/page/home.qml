@@ -6,6 +6,8 @@ import FluentUI 1.0
 
 FluContentPage {
 
+    property bool isChecked: false
+
     id:root
     title: qsTr("App-specific settings")
 
@@ -92,6 +94,26 @@ FluContentPage {
                 left: parent.left
                 leftMargin: 10
                 verticalCenter: parent.verticalCenter
+            }
+
+            FluIconButton{
+                id: myBtn
+
+                iconDelegate: Image {
+                    sourceSize: Qt.size(30, 30)
+                    source: isChecked ? "qrc:/res/images/stop.png" : "qrc:/res/images/start.png"
+                }
+
+                onClicked:{
+                    console.log(isChecked)
+                    if (isChecked) {
+                        // TODO
+                    } else {
+                        // TODO
+                    }
+
+                    isChecked = !isChecked
+                }
             }
 
             // 是否一直启动
