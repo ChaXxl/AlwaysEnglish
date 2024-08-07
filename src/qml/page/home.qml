@@ -91,11 +91,15 @@ FluContentPage {
             isChecked = !isChecked
 
             if (isChecked) {
-                myBtn.text = qsTr("Stop");
+                myBtn.text = qsTr("Stop")
+                btn_AlwaysEnglish.enabled = !btn_AlwaysEnglish.enabled
+                btn_addApp.enabled = !btn_addApp.enabled
 
                 showSuccess(qsTr("Start Successfully"))
             } else {
-                myBtn.text = qsTr("Start");
+                myBtn.text = qsTr("Start")
+                btn_AlwaysEnglish.enabled = !btn_AlwaysEnglish.enabled
+                btn_addApp.enabled = !btn_addApp.enabled
             }
         }
     }
@@ -118,8 +122,6 @@ FluContentPage {
                 leftMargin: 10
                 verticalCenter: parent.verticalCenter
             }
-
-
 
             // 是否一直启动
             FluToggleButton {
