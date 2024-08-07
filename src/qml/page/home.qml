@@ -147,6 +147,8 @@ FluContentPage {
                 onClicked: {
                     table_view.enabled = !checked
                     btn_addApp.enabled = !btn_addApp.enabled
+                    myBtn.enabled = !myBtn.enabled
+
                     if (checked) {
                         ControlInputLayout.startTask()
                     } else {
