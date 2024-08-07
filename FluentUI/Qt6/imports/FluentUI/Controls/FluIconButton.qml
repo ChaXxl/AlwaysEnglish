@@ -7,7 +7,7 @@ import FluentUI
 Button {
     display: Button.IconOnly
     property int iconSize: 20
-    property url iconSource
+    property int iconSource
     property bool disabled: false
     property int radius:4
     property string contentDescription: ""
@@ -60,11 +60,15 @@ Button {
         }
     }
     Component{
-        id: com_icon
-        Image {
-            id: btn_icon
-            sourceSize: control.iconSize
-            source: control.iconSource
+        id:com_icon
+        FluIcon {
+            id:text_icon
+            font.pixelSize: iconSize
+            iconSize: control.iconSize
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            iconColor: control.iconColor
+            iconSource: control.iconSource
         }
     }
     Component{
