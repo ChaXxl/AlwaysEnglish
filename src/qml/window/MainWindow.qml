@@ -26,6 +26,8 @@ FluWindow {
         cellWidth: 150
         z:999
 
+        pageMode: FluNavigationViewType.Stack
+
         items: ItemsOriginal
         footerItems: ItemsFooter
 

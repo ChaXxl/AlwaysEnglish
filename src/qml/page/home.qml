@@ -14,6 +14,8 @@ FluContentPage {
     id:root
     title: qsTr("App-specific settings")
 
+    launchMode: FluPageType.SingleInstance
+
     // 使用 Set 来存储表格的软件路径
     property var existingFilePath: new Set()
 
