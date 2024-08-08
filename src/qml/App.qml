@@ -22,7 +22,7 @@ FluLauncher {
 
         FluApp.windowIcon = "qrc:/res/images/logo.ico"
 
-        FluTheme.darkMode = FluThemeType.System
+        FluTheme.darkMode = SettingsHelper.getDarkMode()
 
         FluTheme.animationEnabled = true
 
