@@ -10,5 +10,6 @@
         <file>res/images/logo.ico</file>
         <file>res/images/start.png</file>
         <file>res/images/stop.png</file>
+        <file>qml/global/GlobalModel.qml</file>
     </qresource>
 </RCC>
