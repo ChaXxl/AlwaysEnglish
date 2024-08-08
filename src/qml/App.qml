@@ -7,6 +7,14 @@ import FluentUI 1.0
 FluLauncher {
     id: app
 
+    // 改变夜间模式时保存设置
+    Connections{
+        target: FluTheme
+        function onDarkModeChanged(){
+            SettingsHelper.saveDarkMode(FluTheme.darkMode)
+        }
+    }
+
     Component.onCompleted: {
         FluApp.init(app)
 
