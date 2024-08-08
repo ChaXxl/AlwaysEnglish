@@ -32,8 +32,8 @@ public:
     }
 
     // 窗口置顶
-    Q_INVOKABLE void saveStayTop(int darkModel) {
-        save("stayTop", darkModel);
+    Q_INVOKABLE void saveStayTop(int stayTop) {
+        save("stayTop", stayTop);
     }
 
     Q_INVOKABLE int getStayTop() {
@@ -41,8 +41,8 @@ public:
     }
 
     // 是否一直打开大小写键
-    Q_INVOKABLE void saveCapLock(int darkModel) {
-        save("capLock", darkModel);
+    Q_INVOKABLE void saveCapLock(bool capLock) {
+        save("capLock", capLock);
     }
 
     Q_INVOKABLE int getCapLock() {
