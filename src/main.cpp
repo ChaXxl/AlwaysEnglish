@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
 #endif
     QGuiApplication app(argc, argv);
 
+    SettingsHelper::getInstance()->init(argv);
+
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
     for (const QString &locale : uiLanguages) {
