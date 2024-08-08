@@ -38,61 +38,61 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="96"/>
-        <location filename="qml/page/home.qml" line="109"/>
+        <location filename="qml/page/home.qml" line="101"/>
+        <location filename="qml/page/home.qml" line="114"/>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="96"/>
-        <location filename="qml/page/home.qml" line="103"/>
-        <location filename="qml/page/home.qml" line="142"/>
+        <location filename="qml/page/home.qml" line="101"/>
+        <location filename="qml/page/home.qml" line="108"/>
+        <location filename="qml/page/home.qml" line="147"/>
         <source>Stop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="107"/>
+        <location filename="qml/page/home.qml" line="112"/>
         <source>Start Successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="138"/>
-        <location filename="qml/page/home.qml" line="145"/>
+        <location filename="qml/page/home.qml" line="143"/>
+        <location filename="qml/page/home.qml" line="150"/>
         <source>AlwaysEnglish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="152"/>
+        <location filename="qml/page/home.qml" line="157"/>
         <source>Keep English All The Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="172"/>
+        <location filename="qml/page/home.qml" line="177"/>
         <source>Add an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="181"/>
+        <location filename="qml/page/home.qml" line="186"/>
         <source>select an APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="203"/>
+        <location filename="qml/page/home.qml" line="208"/>
         <source>icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="214"/>
+        <location filename="qml/page/home.qml" line="219"/>
         <source>Turn on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="218"/>
+        <location filename="qml/page/home.qml" line="223"/>
         <source>Cap Lock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="222"/>
+        <location filename="qml/page/home.qml" line="227"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
