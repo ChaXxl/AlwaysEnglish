@@ -11,13 +11,16 @@ FluContentPage {
     // 控制表格是否能拖拽
     property bool dragEnabled: true
 
+    // 使用 Set 来存储表格的软件路径
+    property var existingFilePath: new Set()
+
+    // 使用 Object 来存储表格每项软件的信息 (路径/名称/是否启动/是否开启大小写键)
+    property var exeInfos: ({})
+
     id:root
     title: qsTr("App-specific settings")
 
     launchMode: FluPageType.SingleInstance
-
-    // 使用 Set 来存储表格的软件路径
-    property var existingFilePath: new Set()
 
     // 显示图标
     Component{
@@ -74,6 +77,9 @@ FluContentPage {
                         // 从 Set 中移除对应行的 APP
                         var exePath = table_view.getRow(row).path
                         existingFilePath.delete(exePath)
+
+                        // 从 exeInfos Object 中移除对应的 APP
+                        delete exeInfos[exePath]
 
                         table_view.closeEditor()
                         table_view.removeRow(row)         
@@ -282,6 +288,13 @@ FluContentPage {
 
         // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
         fileIconBase64 = iconProvider.getExeIcon(exePath);
+
+        // 用软件路径做 key 来保存其图标 是否启用 是否打开大小写键 等属性
+        exeInfos[exePath] = {
+            icon:  fileIconBase64,
+            isTurnOn: true,
+            isCapLock: true,
+        }
 
         table_view.appendRow({
             icon: table_view.customItem(com_ico,{icon: fileIconBase64}),
