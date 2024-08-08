@@ -45,8 +45,15 @@ FluContentPage {
         Item {
             RowLayout {
                 anchors.centerIn: parent
+
                 FluToggleSwitch {
                     checked: true
+
+                    onClicked: {
+                        var rowData = table_view.getRow(row)
+                        var exePath = rowData.path
+                        exeInfos[exePath]['isTurnOn'] = !exeInfos[exePath]['isTurnOn']
+                    }
                 }
             }
         }
@@ -58,8 +65,15 @@ FluContentPage {
         Item {
             RowLayout {
                 anchors.centerIn: parent
+
                 FluToggleSwitch {
                     checked: true
+
+                    onClicked: {
+                        var rowData = table_view.getRow(row)
+                        var exePath = rowData.path
+                        exeInfos[exePath]['isCapLock'] = !exeInfos[exePath]['isCapLock']
+                    }
                 }
             }
         }
