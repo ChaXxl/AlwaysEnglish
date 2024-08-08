@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import FluentUI 1.0
+import "../global"
 
 FluScrollablePage{
     title: qsTr("Settings")
@@ -57,7 +58,10 @@ FluScrollablePage{
         FluCheckBox {
             text: qsTr("Whether turn on Cap Lock when AlwaysEnglish is on")
             anchors.verticalCenter: parent.verticalCenter
-            // onClicked:
+            onClicked: {
+                GlobalModel.isAlwaysCapLock = !GlobalModel.isAlwaysCapLock
+                SettingsHelper.saveCapLock(GlobalModel.isAlwaysCapLock)
+            }
         }
     }
 
