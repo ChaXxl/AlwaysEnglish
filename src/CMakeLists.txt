@@ -47,6 +47,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         LnkResolver.h LnkResolver.cpp
         ControlInputLayout.h ControlInputLayout.cpp
         GetActiveWindowPath.h GetActiveWindowPath.cpp
+        helper/SettingsHelper.cpp helper/SettingsHelper.h
     )
 else()
     add_executable(${PROJECT_NAME}
