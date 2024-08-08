@@ -2,6 +2,7 @@ CMakeLists.txt.user
 .DS_Store
 bin
 build
+cmake-build-debug
 .vs
 CMakePresets.json
 CMakeUserPresets.json
