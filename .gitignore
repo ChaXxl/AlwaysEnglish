@@ -4,5 +4,6 @@ bin
 build
 cmake-build-debug
 .vs
+.idea
 CMakePresets.json
 CMakeUserPresets.json
