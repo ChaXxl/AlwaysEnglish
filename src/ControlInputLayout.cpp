@@ -1,4 +1,5 @@
 #include "ControlInputLayout.h"
+#include "GetActiveWindowPath.h"
 
 ControlInputLayout::ControlInputLayout(QObject *parent) : QObject(parent), m_isCapLock(true) {
     m_timer = new QTimer(this);
@@ -18,6 +19,11 @@ void ControlInputLayout::stopTask() {
 }
 
 void ControlInputLayout::onTimerTimeout() {
+    auto gw = GetActiveWindowPath::getInstance();
+    if (!gw->isTargetWindow()) {
+        return;
+    }
+
     switchToEnglish();
     if (m_isCapLock) {
         capLock();

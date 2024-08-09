@@ -1,5 +1,5 @@
 #include "GetActiveWindowPath.h"
-#include <QDebug>
+#include <QRegularExpression>
 
 GetActiveWindowPath::GetActiveWindowPath(QObject *parent) : QObject(parent) {}
 
@@ -48,4 +48,41 @@ QString GetActiveWindowPath::getCurrentActiveWindow() {
     }
 
     return processPath;
+}
+
+QString GetActiveWindowPath::extractExeName(const QString &path) {
+    // 定义正则表达式模式
+    QRegularExpression pattern(R"(([^/\\]+)\.exe$)");
+    QRegularExpressionMatch match = pattern.match(path);
+
+    // 检查匹配是否成功
+    if (match.hasMatch()) {
+        // 提取匹配的组
+        return match.captured(1);
+    }
+    return "";
+}
+
+bool GetActiveWindowPath::isTargetWindow() {
+    // 获取当前正在使用的窗口的软件所在路径
+    QString activeWindow = getCurrentActiveWindow();
+
+    // 提取软件的名称
+    auto exeName = extractExeName(activeWindow);
+    if (exeName.isEmpty()) {
+        return false;
+    }
+
+    // 将列表字符串用 , 分割
+    QString exes = m_settings->getExistingFilePath();
+    auto fileList = exes.split(",");
+
+    // 判断列表里面有没有当前窗口
+    for (const auto &i: fileList) {
+        if (i.contains(exeName)) {
+            return true;
+        }
+    }
+
+    return false;
 }
