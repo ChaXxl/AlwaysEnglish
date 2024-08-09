@@ -67,7 +67,7 @@ SINGLETON(SettingsHelper)
     }
 
     Q_INVOKABLE QString getExeInfos() {
-        return get("exeInfos", QVariant("en_US")).toString();
+        return get("exeInfos", QVariant("")).toString();
     }
 
     // 软件列表
@@ -76,7 +76,7 @@ SINGLETON(SettingsHelper)
     }
 
     Q_INVOKABLE QString getExistingFilePath() {
-        return get("existingFilePath", QVariant("en_US")).toString();
+        return get("existingFilePath", QVariant("")).toString();
     }
 
 private:
