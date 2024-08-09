@@ -61,7 +61,7 @@ SINGLETON(SettingsHelper)
         return get("language", QVariant("en_US")).toString();
     }
 
-    // 软件列表
+    // 表格里软件的详细信息
     Q_INVOKABLE void saveExeInfos(const QJSValue &exeInfos) {
         QJsonDocument jsonDoc = QJsonDocument::fromVariant(exeInfos.toVariant());
 
@@ -72,6 +72,19 @@ SINGLETON(SettingsHelper)
 
     Q_INVOKABLE QString getExeInfos() {
         return get("exeInfos", QVariant("en_US")).toString();
+    }
+
+    // 软件列表
+    Q_INVOKABLE void saveExistingFilePath(const QJSValue &existingFilePath) {
+        QJsonDocument jsonDoc = QJsonDocument::fromVariant(existingFilePath.toVariant());
+
+        QString jsonStr = jsonDoc.toJson(QJsonDocument::Indented);
+
+        save("existingFilePath", jsonStr);
+    }
+
+    Q_INVOKABLE QString getExistingFilePath() {
+        return get("existingFilePath", QVariant("en_US")).toString();
     }
 
 private:

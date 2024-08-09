@@ -57,6 +57,7 @@ FluContentPage {
                         table_view.setRow(row, rowObj)
 
                         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+                        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
                     }
                 }
             }
@@ -86,6 +87,7 @@ FluContentPage {
                         table_view.setRow(row, rowObj)
 
                         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+                        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
                     }
                 }
             }
@@ -112,6 +114,7 @@ FluContentPage {
                         table_view.removeRow(row)
 
                         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+                        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
                     }
                 }
             }
@@ -347,5 +350,6 @@ FluContentPage {
         })
 
         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
     }
 }
