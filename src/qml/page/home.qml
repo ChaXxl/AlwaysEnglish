@@ -42,12 +42,19 @@ FluContentPage {
                 anchors.centerIn: parent
 
                 FluToggleSwitch {
-                    checked: true
+                    checked: {
+                        var rowObj = table_view.getRow(row)
+                        var exePath = rowObj.path
+                        GlobalModel.exeInfos[exePath]['isTurnOn']
+                    }
 
                     onClicked: {
                         var rowObj = table_view.getRow(row)
                         var exePath = rowObj.path
                         GlobalModel.exeInfos[exePath]['isTurnOn'] = checked
+
+                        rowObj.turnon = table_view.customItem(com_column_turn_on)
+                        table_view.setRow(row, rowObj)
                     }
                 }
             }
@@ -62,12 +69,19 @@ FluContentPage {
                 anchors.centerIn: parent
 
                 FluToggleSwitch {
-                    checked: true
+                    checked: {
+                        var rowObj = table_view.getRow(row)
+                        var exePath = rowObj.path
+                        GlobalModel.exeInfos[exePath]['isCapLock']
+                    }
 
                     onClicked: {
                         var rowObj = table_view.getRow(row)
                         var exePath = rowObj.path
                         GlobalModel.exeInfos[exePath]['isCapLock'] = checked
+
+                        rowObj.Caps = table_view.customItem(com_column_caps)
+                        table_view.setRow(row, rowObj)
                     }
                 }
             }
@@ -257,18 +271,16 @@ FluContentPage {
         }
 
         Component.onCompleted: {
-            if (!exeInfos) {
+            if (!GlobalModel.exeInfos) {
                 return;
             }
 
             // for (var i = 0; i < Object.keys(obj).length; i++) {
-                var rowData = table_view.getRow(0);
-                rowData.isTurnOn
+            //     var rowData = table_view.getRow(0);
+            //     rowData.isTurnOn
             // }
         }
     }
-
-
 
     function addDataToRow(filePath) {
         if (!dragEnabled) {
@@ -322,8 +334,8 @@ FluContentPage {
             icon: table_view.customItem(com_ico, {icon: fileIconBase64}),
             path: exePath,
             name: fileNameWithoutExtension,
-            turnon: table_view.customItem(com_column_turn_on),
-            Caps: table_view.customItem(com_column_caps),
+            turnon: table_view.customItem(com_column_turn_on, {checked: true}),
+            Caps: table_view.customItem(com_column_caps, {checked: true}),
             action: table_view.customItem(com_action),
             _key: FluTools.uuid()
         })
