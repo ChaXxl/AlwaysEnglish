@@ -4,6 +4,9 @@
 #include <QtQml/qqml.h>
 #include <QSettings>
 #include <QScopedPointer>
+#include <QJSValue>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QCoreApplication>
 #include <QDir>
 #include "../singleton.h"
@@ -56,6 +59,19 @@ SINGLETON(SettingsHelper)
 
     Q_INVOKABLE QString getLanguage() {
         return get("language", QVariant("en_US")).toString();
+    }
+
+    // 软件列表
+    Q_INVOKABLE void saveExeInfos(const QJSValue &exeInfos) {
+        QJsonDocument jsonDoc = QJsonDocument::fromVariant(exeInfos.toVariant());
+
+        QString jsonStr = jsonDoc.toJson(QJsonDocument::Indented);
+
+        save("exeInfos", jsonStr);
+    }
+
+    Q_INVOKABLE QString getExeInfos() {
+        return get("exeInfos", QVariant("en_US")).toString();
     }
 
 private:
