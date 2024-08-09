@@ -57,7 +57,10 @@ FluContentPage {
                         table_view.setRow(row, rowObj)
 
                         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
-                        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
+
+                        var array = Array.from(GlobalModel.existingFilePath)
+                        var jsonStr = JSON.stringify(array)
+                        SettingsHelper.saveExistingFilePath(jsonStr)
                     }
                 }
             }
@@ -87,7 +90,10 @@ FluContentPage {
                         table_view.setRow(row, rowObj)
 
                         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
-                        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
+
+                        var array = Array.from(GlobalModel.existingFilePath)
+                        var jsonStr = JSON.stringify(array)
+                        SettingsHelper.saveExistingFilePath(jsonStr)
                     }
                 }
             }
@@ -114,7 +120,10 @@ FluContentPage {
                         table_view.removeRow(row)
 
                         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
-                        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
+
+                        var array = Array.from(GlobalModel.existingFilePath)
+                        var jsonStr = JSON.stringify(array)
+                        SettingsHelper.saveExistingFilePath(jsonStr)
                     }
                 }
             }
@@ -350,6 +359,9 @@ FluContentPage {
         })
 
         SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
-        SettingsHelper.saveExistingFilePath(GlobalModel.existingFilePath)
+
+        var array = Array.from(GlobalModel.existingFilePath)
+        var jsonStr = JSON.stringify(array)
+        SettingsHelper.saveExistingFilePath(jsonStr)
     }
 }

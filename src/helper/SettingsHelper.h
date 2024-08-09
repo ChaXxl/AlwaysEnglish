@@ -75,12 +75,8 @@ SINGLETON(SettingsHelper)
     }
 
     // 软件列表
-    Q_INVOKABLE void saveExistingFilePath(const QJSValue &existingFilePath) {
-        QJsonDocument jsonDoc = QJsonDocument::fromVariant(existingFilePath.toVariant());
-
-        QString jsonStr = jsonDoc.toJson(QJsonDocument::Indented);
-
-        save("existingFilePath", jsonStr);
+    Q_INVOKABLE void saveExistingFilePath(const QString &existingFilePath) {
+        save("existingFilePath", existingFilePath);
     }
 
     Q_INVOKABLE QString getExistingFilePath() {
