@@ -290,16 +290,29 @@ FluContentPage {
                 }
             }
         }
+    }
 
-        Component.onCompleted: {
-            if (!GlobalModel.exeInfos) {
-                return;
-            }
+    Component.onCompleted: {
+        if (!GlobalModel.exeInfos) {
+            return;
+        }
 
-            // for (var i = 0; i < Object.keys(obj).length; i++) {
-            //     var rowData = table_view.getRow(0);
-            //     rowData.isTurnOn
-            // }
+        for (let key in GlobalModel.exeInfos) {
+            // 分割路径提取带扩展名的文件名
+            var fileName = key.toString().split("\\").pop();
+
+            // 没有扩展名的文件名
+            const fileNameWithoutExtension = fileName.split(".")[0];
+
+            table_view.appendRow({
+                icon: table_view.customItem(com_ico, {icon: GlobalModel.exeInfos.icon}),
+                path: key,
+                name: fileNameWithoutExtension,
+                turnon: table_view.customItem(com_column_turn_on),
+                Caps: table_view.customItem(com_column_caps),
+                action: table_view.customItem(com_action),
+                _key: FluTools.uuid()
+            })
         }
     }
 
