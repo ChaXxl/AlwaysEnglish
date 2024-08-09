@@ -12,23 +12,23 @@ FluContentPage {
     // 控制表格是否能拖拽
     property bool dragEnabled: true
 
-    id:root
+    id: root
     title: qsTr("App-specific settings")
 
     launchMode: FluPageType.SingleInstance
 
     // 显示图标
-    Component{
-        id:com_ico
-        Item{
-            FluClip{
+    Component {
+        id: com_ico
+        Item {
+            FluClip {
                 anchors.centerIn: parent
                 width: 30
                 height: 30
-                Image{
+                Image {
                     anchors.fill: parent
                     source: options && options.icon ? options.icon : ""
-                    sourceSize: Qt.size(80,80)
+                    sourceSize: Qt.size(80, 80)
                 }
             }
         }
@@ -91,14 +91,14 @@ FluContentPage {
                         delete GlobalModel.exeInfos[exePath]
 
                         table_view.closeEditor()
-                        table_view.removeRow(row)         
+                        table_view.removeRow(row)
                     }
                 }
             }
         }
     }
 
-    FluIconButton{
+    FluIconButton {
         id: myBtn
 
         iconDelegate: Image {
@@ -107,7 +107,7 @@ FluContentPage {
 
         text: !isChecked ? qsTr("Start") : qsTr("Stop")
 
-        onClicked:{
+        onClicked: {
             isChecked = !isChecked
             dragEnabled = !dragEnabled
 
@@ -125,9 +125,9 @@ FluContentPage {
         }
     }
 
-    FluFrame{
-        id:layout_controls
-        anchors{
+    FluFrame {
+        id: layout_controls
+        anchors {
             left: parent.left
             right: parent.right
             top: parent.top
@@ -136,9 +136,9 @@ FluContentPage {
         }
         height: 50
 
-        Row{
+        Row {
             spacing: 10
-            anchors{
+            anchors {
                 left: parent.left
                 leftMargin: 10
                 verticalCenter: parent.verticalCenter
@@ -150,12 +150,12 @@ FluContentPage {
                 text: qsTr("AlwaysEnglish")
 
                 normalColor: {
-                    if(checked){
+                    if (checked) {
                         btn_AlwaysEnglish.text = qsTr("Stop")
                         return Qt.rgba(25, 20, 150, 1)
-                    }else{
+                    } else {
                         btn_AlwaysEnglish.text = qsTr("AlwaysEnglish")
-                        return FluTheme.dark ? Qt.rgba(62/255,62/255,62/255,1) : Qt.rgba(254/255,254/255,254/255,1)
+                        return FluTheme.dark ? Qt.rgba(62 / 255, 62 / 255, 62 / 255, 1) : Qt.rgba(254 / 255, 254 / 255, 254 / 255, 1)
                     }
                 }
 
@@ -179,7 +179,7 @@ FluContentPage {
             }
 
             // 添加
-            FluButton{
+            FluButton {
                 id: btn_addApp
                 text: qsTr("Add an APP")
                 onClicked: fileDialog.open()
@@ -200,9 +200,9 @@ FluContentPage {
         }
     }
 
-    FluTableView{
-        id:table_view
-        anchors{
+    FluTableView {
+        id: table_view
+        anchors {
             left: parent.left
             right: parent.right
             top: layout_controls.bottom
@@ -210,7 +210,7 @@ FluContentPage {
         }
         anchors.topMargin: 5
 
-        columnSource:[
+        columnSource: [
             {
                 title: qsTr("icon"),
                 dataIndex: 'icon',
@@ -300,19 +300,19 @@ FluContentPage {
 
         // 用软件路径做 key 来保存其图标 是否启用 是否打开大小写键 等属性
         GlobalModel.exeInfos[exePath] = {
-            icon:  fileIconBase64,
+            icon: fileIconBase64,
             isTurnOn: true,
             isCapLock: true,
         }
 
         table_view.appendRow({
-            icon: table_view.customItem(com_ico,{icon: fileIconBase64}),
+            icon: table_view.customItem(com_ico, {icon: fileIconBase64}),
             path: exePath,
             name: fileNameWithoutExtension,
             turnon: table_view.customItem(com_column_turn_on),
             Caps: table_view.customItem(com_column_caps),
             action: table_view.customItem(com_action),
-            _key:FluTools.uuid()
+            _key: FluTools.uuid()
         })
     }
 }
