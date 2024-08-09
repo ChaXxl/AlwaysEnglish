@@ -64,10 +64,10 @@ FluScrollablePage{
                 SettingsHelper.saveCapLock(GlobalModel.isAlwaysCapLock)
             }
         }
-    }
 
-    Component.onCompleted: {
-        _isAlwaysCapLock.checked = GlobalModel.getCapLock()
+        Component.onCompleted: {
+            _isAlwaysCapLock.checked = GlobalModel.isAlwaysCapLock
+        }
     }
 
     function setWindowFlags(checked) {
