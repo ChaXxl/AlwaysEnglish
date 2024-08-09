@@ -45,8 +45,8 @@ FluContentPage {
                     checked: true
 
                     onClicked: {
-                        var rowData = table_view.getRow(row)
-                        var exePath = rowData.path
+                        var rowObj = table_view.getRow(row)
+                        var exePath = rowObj.path
                         GlobalModel.exeInfos[exePath]['isTurnOn'] = checked
                     }
                 }
@@ -65,8 +65,8 @@ FluContentPage {
                     checked: true
 
                     onClicked: {
-                        var rowData = table_view.getRow(row)
-                        var exePath = rowData.path
+                        var rowObj = table_view.getRow(row)
+                        var exePath = rowObj.path
                         GlobalModel.exeInfos[exePath]['isCapLock'] = checked
                     }
                 }
@@ -255,7 +255,20 @@ FluContentPage {
                 }
             }
         }
+
+        Component.onCompleted: {
+            if (!exeInfos) {
+                return;
+            }
+
+            // for (var i = 0; i < Object.keys(obj).length; i++) {
+                var rowData = table_view.getRow(0);
+                rowData.isTurnOn
+            // }
+        }
     }
+
+
 
     function addDataToRow(filePath) {
         if (!dragEnabled) {
