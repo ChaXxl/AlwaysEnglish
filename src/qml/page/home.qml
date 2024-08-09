@@ -47,7 +47,7 @@ FluContentPage {
                     onClicked: {
                         var rowData = table_view.getRow(row)
                         var exePath = rowData.path
-                        GlobalModel.exeInfos[exePath]['isTurnOn'] = !GlobalModel.exeInfos[exePath]['isTurnOn']
+                        GlobalModel.exeInfos[exePath]['isTurnOn'] = checked
                     }
                 }
             }
@@ -67,7 +67,7 @@ FluContentPage {
                     onClicked: {
                         var rowData = table_view.getRow(row)
                         var exePath = rowData.path
-                        GlobalModel.exeInfos[exePath]['isCapLock'] = !GlobalModel.exeInfos[exePath]['isCapLock']
+                        GlobalModel.exeInfos[exePath]['isCapLock'] = checked
                     }
                 }
             }
