@@ -100,37 +100,37 @@
 <context>
     <name>settings</name>
     <message>
-        <location filename="qml/page/settings.qml" line="8"/>
+        <location filename="qml/page/settings.qml" line="9"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="23"/>
+        <location filename="qml/page/settings.qml" line="24"/>
         <source>Dark Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="28"/>
+        <location filename="qml/page/settings.qml" line="29"/>
         <source>System</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="28"/>
+        <location filename="qml/page/settings.qml" line="29"/>
         <source>Light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="28"/>
+        <location filename="qml/page/settings.qml" line="29"/>
         <source>Dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="46"/>
+        <location filename="qml/page/settings.qml" line="48"/>
         <source>Sticky on Top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="58"/>
+        <location filename="qml/page/settings.qml" line="69"/>
         <source>Whether turn on Cap Lock when AlwaysEnglish is on</source>
         <translation type="unfinished"></translation>
     </message>
