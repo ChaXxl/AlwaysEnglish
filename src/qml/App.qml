@@ -9,9 +9,10 @@ FluLauncher {
     id: app
 
     // 改变夜间模式时保存设置
-    Connections{
+    Connections {
         target: FluTheme
-        function onDarkModeChanged(){
+
+        function onDarkModeChanged() {
             SettingsHelper.saveDarkMode(FluTheme.darkMode)
         }
     }
@@ -29,7 +30,7 @@ FluLauncher {
         FluTheme.animationEnabled = true
 
         FluRouter.routes = {
-            "/":"qrc:/qml/window/MainWindow.qml",
+            "/": "qrc:/qml/window/MainWindow.qml",
         }
         FluRouter.navigate("/")
     }

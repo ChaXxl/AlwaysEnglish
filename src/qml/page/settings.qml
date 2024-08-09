@@ -5,32 +5,35 @@ import QtQuick.Controls 2.15
 import FluentUI 1.0
 import "../global"
 
-FluScrollablePage{
+FluScrollablePage {
     title: qsTr("Settings")
 
-    FluFrame{
+    FluFrame {
         Layout.fillWidth: true
         Layout.topMargin: 20
         height: 128
         padding: 10
 
-        ColumnLayout{
+        ColumnLayout {
             spacing: 5
-            anchors{
+            anchors {
                 top: parent.top
                 left: parent.left
             }
-            FluText{
+            FluText {
                 text: qsTr("Dark Mode")
                 font: FluTextStyle.BodyStrong
                 Layout.bottomMargin: 4
             }
-            Repeater{
-                model: [{title:qsTr("System"),mode:FluThemeType.System},{title:qsTr("Light"),mode:FluThemeType.Light},{title:qsTr("Dark"),mode:FluThemeType.Dark}]
-                delegate: FluRadioButton{
-                    checked : FluTheme.darkMode === modelData.mode
-                    text:modelData.title
-                    clickListener:function(){
+            Repeater {
+                model: [{title: qsTr("System"), mode: FluThemeType.System}, {
+                    title: qsTr("Light"),
+                    mode: FluThemeType.Light
+                }, {title: qsTr("Dark"), mode: FluThemeType.Dark}]
+                delegate: FluRadioButton {
+                    checked: FluTheme.darkMode === modelData.mode
+                    text: modelData.title
+                    clickListener: function () {
                         FluTheme.darkMode = modelData.mode
                     }
                 }
@@ -83,11 +86,11 @@ FluScrollablePage{
         if (checked) {
             // 置顶的时候保留系统边框和窗口控制按钮
             flags = Qt.Window |
-                    Qt.WindowStaysOnTopHint |
-                    Qt.WindowTitleHint |
-                    Qt.WindowSystemMenuHint |
-                    Qt.WindowCloseButtonHint |
-                    Qt.WindowMinMaxButtonsHint
+                Qt.WindowStaysOnTopHint |
+                Qt.WindowTitleHint |
+                Qt.WindowSystemMenuHint |
+                Qt.WindowCloseButtonHint |
+                Qt.WindowMinMaxButtonsHint
         } else {
             flags = Qt.Window
         }

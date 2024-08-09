@@ -6,7 +6,7 @@ import "../global"
 
 FluWindow {
 
-    id:window
+    id: window
     title: qsTr("AlwaysEnglish")
     width: 860
     height: 668
@@ -19,14 +19,14 @@ FluWindow {
         FluRouter.exit()
     }
 
-    FluNavigationView{
-        id:nav_view
+    FluNavigationView {
+        id: nav_view
         width: parent.width
         height: parent.height
         displayMode: FluNavigationViewType.Open
         hideNavAppBar: true
         cellWidth: 150
-        z:999
+        z: 999
 
         pageMode: FluNavigationViewType.Stack
 
@@ -40,8 +40,8 @@ FluWindow {
         }
     }
 
-    FluLoader{
-        id:loader_reveal
+    FluLoader {
+        id: loader_reveal
         anchors.fill: parent
     }
 
