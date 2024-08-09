@@ -13,6 +13,8 @@ FluWindow {
     minimumWidth: 668
     minimumHeight: 320
 
+    launchMode: FluWindowType.SingleTask
+
     Component.onDestruction: {
         FluRouter.exit()
     }
