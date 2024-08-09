@@ -56,13 +56,18 @@ FluScrollablePage{
         height: 50
         padding: 10
         FluCheckBox {
+            id: _isAlwaysCapLock
             text: qsTr("Whether turn on Cap Lock when AlwaysEnglish is on")
             anchors.verticalCenter: parent.verticalCenter
             onClicked: {
-                GlobalModel.isAlwaysCapLock = !GlobalModel.isAlwaysCapLock
+                GlobalModel.isAlwaysCapLock = checked
                 SettingsHelper.saveCapLock(GlobalModel.isAlwaysCapLock)
             }
         }
+    }
+
+    Component.onCompleted: {
+        _isAlwaysCapLock.checked = GlobalModel.getCapLock()
     }
 
     function setWindowFlags(checked) {
