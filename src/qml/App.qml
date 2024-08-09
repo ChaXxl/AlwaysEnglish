@@ -27,6 +27,15 @@ FluLauncher {
         FluTheme.darkMode = SettingsHelper.getDarkMode()
         GlobalModel.isAlwaysCapLock = SettingsHelper.getCapLock()
 
+        let jsonStr = SettingsHelper.getExistingFilePath();
+        const array = JSON.parse(jsonStr);
+        const set = new Set(array);
+        GlobalModel.existingFilePath = set
+
+        jsonStr = SettingsHelper.getExeInfos()
+        const obj = JSON.parse(jsonStr);
+        GlobalModel.exeInfos = obj
+
         FluTheme.animationEnabled = true
 
         FluRouter.routes = {
