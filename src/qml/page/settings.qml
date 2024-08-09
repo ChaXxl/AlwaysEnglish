@@ -44,9 +44,18 @@ FluScrollablePage{
         height: 50
         padding: 10
         FluCheckBox {
+            id: _isStayTop
             text: qsTr("Sticky on Top")
             anchors.verticalCenter: parent.verticalCenter
-            onClicked: setWindowFlags(checked)
+            onClicked: {
+                GlobalModel.stayTop = checked
+
+                setWindowFlags(checked)
+            }
+        }
+
+        Component.onCompleted: {
+            _isStayTop.checked = GlobalModel.stayTop
         }
     }
 
