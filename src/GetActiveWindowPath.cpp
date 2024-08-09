@@ -1,5 +1,6 @@
 #include "GetActiveWindowPath.h"
 #include <QRegularExpression>
+#include <QDebug>
 
 GetActiveWindowPath::GetActiveWindowPath(QObject *parent) : QObject(parent) {}
 
@@ -83,6 +84,8 @@ bool GetActiveWindowPath::isTargetWindow() {
             return true;
         }
     }
+
+    qDebug() << exeName << "不在列表";
 
     return false;
 }
