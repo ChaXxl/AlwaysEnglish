@@ -334,8 +334,8 @@ FluContentPage {
             icon: table_view.customItem(com_ico, {icon: fileIconBase64}),
             path: exePath,
             name: fileNameWithoutExtension,
-            turnon: table_view.customItem(com_column_turn_on, {checked: true}),
-            Caps: table_view.customItem(com_column_caps, {checked: true}),
+            turnon: table_view.customItem(com_column_turn_on),
+            Caps: table_view.customItem(com_column_caps),
             action: table_view.customItem(com_action),
             _key: FluTools.uuid()
         })
