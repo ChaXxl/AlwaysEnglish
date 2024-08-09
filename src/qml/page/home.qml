@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import Qt.labs.platform
 import FluentUI 1.0
+import "../global"
 
 FluContentPage {
 
@@ -10,12 +11,6 @@ FluContentPage {
 
     // 控制表格是否能拖拽
     property bool dragEnabled: true
-
-    // 使用 Set 来存储表格的软件路径
-    property var existingFilePath: new Set()
-
-    // 使用 Object 来存储表格每项软件的信息 (路径/名称/是否启动/是否开启大小写键)
-    property var exeInfos: ({})
 
     id:root
     title: qsTr("App-specific settings")
@@ -52,7 +47,7 @@ FluContentPage {
                     onClicked: {
                         var rowData = table_view.getRow(row)
                         var exePath = rowData.path
-                        exeInfos[exePath]['isTurnOn'] = !exeInfos[exePath]['isTurnOn']
+                        GlobalModel.exeInfos[exePath]['isTurnOn'] = !GlobalModel.exeInfos[exePath]['isTurnOn']
                     }
                 }
             }
@@ -72,7 +67,7 @@ FluContentPage {
                     onClicked: {
                         var rowData = table_view.getRow(row)
                         var exePath = rowData.path
-                        exeInfos[exePath]['isCapLock'] = !exeInfos[exePath]['isCapLock']
+                        GlobalModel.exeInfos[exePath]['isCapLock'] = !GlobalModel.exeInfos[exePath]['isCapLock']
                     }
                 }
             }
@@ -90,10 +85,10 @@ FluContentPage {
                     onClicked: {
                         // 从 Set 中移除对应行的 APP
                         var exePath = table_view.getRow(row).path
-                        existingFilePath.delete(exePath)
+                        GlobalModel.existingFilePath.delete(exePath)
 
-                        // 从 exeInfos Object 中移除对应的 APP
-                        delete exeInfos[exePath]
+                        // 从 GlobalModel.exeInfos Object 中移除对应的 APP
+                        delete GlobalModel.exeInfos[exePath]
 
                         table_view.closeEditor()
                         table_view.removeRow(row)         
@@ -293,18 +288,18 @@ FluContentPage {
         }
 
         // 判断表格是否已有该软件, 若已有则不重复添加
-        if (existingFilePath.has(exePath)) {
+        if (GlobalModel.existingFilePath.has(exePath)) {
             return;
         }
 
         // 添加到 Set 中
-        existingFilePath.add(exePath);
+        GlobalModel.existingFilePath.add(exePath);
 
         // 根据 exe 路径来找到它的图标, 拿到的是 Base64 格式
         fileIconBase64 = iconProvider.getExeIcon(exePath);
 
         // 用软件路径做 key 来保存其图标 是否启用 是否打开大小写键 等属性
-        exeInfos[exePath] = {
+        GlobalModel.exeInfos[exePath] = {
             icon:  fileIconBase64,
             isTurnOn: true,
             isCapLock: true,
