@@ -151,11 +151,17 @@ FluContentPage {
                 btn_AlwaysEnglish.enabled = !btn_AlwaysEnglish.enabled
                 btn_addApp.enabled = !btn_addApp.enabled
 
+                // 启动
+                ControlInputLayout.startTask()
+
                 showSuccess(qsTr("Start Successfully"))
             } else {
                 myBtn.text = qsTr("Start")
                 btn_AlwaysEnglish.enabled = !btn_AlwaysEnglish.enabled
                 btn_addApp.enabled = !btn_addApp.enabled
+
+                // 停止
+                ControlInputLayout.stopTask()
             }
         }
     }
