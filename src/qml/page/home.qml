@@ -56,7 +56,8 @@ FluContentPage {
                         rowObj.turnon = table_view.customItem(com_column_turn_on)
                         table_view.setRow(row, rowObj)
 
-                        SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+                        var jsonStr = JSON.stringify(GlobalModel.exeInfos)
+                        SettingsHelper.saveExeInfos(jsonStr)
 
                         var array = Array.from(GlobalModel.existingFilePath)
                         var jsonStr = JSON.stringify(array)
@@ -89,7 +90,8 @@ FluContentPage {
                         rowObj.Caps = table_view.customItem(com_column_caps)
                         table_view.setRow(row, rowObj)
 
-                        SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+                        var jsonStr = JSON.stringify(GlobalModel.exeInfos)
+                        SettingsHelper.saveExeInfos(jsonStr)
 
                         var array = Array.from(GlobalModel.existingFilePath)
                         var jsonStr = JSON.stringify(array)
@@ -119,7 +121,8 @@ FluContentPage {
                         table_view.closeEditor()
                         table_view.removeRow(row)
 
-                        SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+                        var jsonStr = JSON.stringify(GlobalModel.exeInfos)
+                        SettingsHelper.saveExeInfos(jsonStr)
 
                         var array = Array.from(GlobalModel.existingFilePath)
                         var jsonStr = JSON.stringify(array)
@@ -358,7 +361,8 @@ FluContentPage {
             _key: FluTools.uuid()
         })
 
-        SettingsHelper.saveExeInfos(GlobalModel.exeInfos)
+        var jsonStr = JSON.stringify(GlobalModel.exeInfos)
+        SettingsHelper.saveExeInfos(jsonStr)
 
         var array = Array.from(GlobalModel.existingFilePath)
         var jsonStr = JSON.stringify(array)

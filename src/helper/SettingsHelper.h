@@ -62,12 +62,8 @@ SINGLETON(SettingsHelper)
     }
 
     // 表格里软件的详细信息
-    Q_INVOKABLE void saveExeInfos(const QJSValue &exeInfos) {
-        QJsonDocument jsonDoc = QJsonDocument::fromVariant(exeInfos.toVariant());
-
-        QString jsonStr = jsonDoc.toJson(QJsonDocument::Indented);
-
-        save("exeInfos", jsonStr);
+    Q_INVOKABLE void saveExeInfos(const QString &exeInfos) {
+        save("exeInfos", exeInfos);
     }
 
     Q_INVOKABLE QString getExeInfos() {
