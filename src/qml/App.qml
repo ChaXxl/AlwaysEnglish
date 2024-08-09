@@ -3,6 +3,7 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import FluentUI 1.0
+import "global"
 
 FluLauncher {
     id: app
@@ -23,6 +24,7 @@ FluLauncher {
         FluApp.windowIcon = "qrc:/res/images/logo.ico"
 
         FluTheme.darkMode = SettingsHelper.getDarkMode()
+        GlobalModel.isAlwaysCapLock = SettingsHelper.getCapLock()
 
         FluTheme.animationEnabled = true
 

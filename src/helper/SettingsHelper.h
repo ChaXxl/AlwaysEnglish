@@ -45,8 +45,8 @@ public:
         save("capLock", capLock);
     }
 
-    Q_INVOKABLE int getCapLock() {
-        return get("capLock", QVariant(0)).toInt();
+    Q_INVOKABLE bool getCapLock() {
+        return get("capLock", QVariant(0)).toBool();
     }
 
     // 语言
