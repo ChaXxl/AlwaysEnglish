@@ -31,8 +31,7 @@ QString GetActiveWindowPath::GetProcessPathByWindowHandle(HWND hwnd) {
     return fileInfo.filePath();
 }
 
-QString GetActiveWindowPath::getCurrentActiveWindow()
-{
+QString GetActiveWindowPath::getCurrentActiveWindow() {
     HWND foreGroundWindowHwnd = GetForegroundWindow();
 
     if (NULL == foreGroundWindowHwnd) {

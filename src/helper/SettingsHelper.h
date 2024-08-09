@@ -10,13 +10,13 @@
 
 class SettingsHelper : public QObject {
 
-    Q_OBJECT
+Q_OBJECT
 
 private:
     explicit SettingsHelper(QObject *parent = nullptr);
 
 public:
-    SINGLETON(SettingsHelper)
+SINGLETON(SettingsHelper)
 
     ~SettingsHelper() override;
 
@@ -60,6 +60,7 @@ public:
 
 private:
     void save(const QString &key, QVariant val);
+
     QVariant get(const QString &key, QVariant def = {});
 
 private:

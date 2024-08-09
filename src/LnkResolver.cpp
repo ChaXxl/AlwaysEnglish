@@ -5,10 +5,9 @@
 
 LnkResolver::LnkResolver(QObject *parent) : QObject(parent) {}
 
-QString LnkResolver::resolveLnk(const QString &lnkPath)
-{
+QString LnkResolver::resolveLnk(const QString &lnkPath) {
     HRESULT hres;
-    IShellLink* psl;
+    IShellLink *psl;
     WCHAR szGotPath[MAX_PATH];
     WCHAR szDescription[MAX_PATH];
     WIN32_FIND_DATA wfd;
@@ -20,15 +19,15 @@ QString LnkResolver::resolveLnk(const QString &lnkPath)
     }
 
     // 创建 IShellLink 接口的实例
-    hres = CoCreateInstance(CLSID_ShellLink, NULL, CLSCTX_INPROC_SERVER, IID_IShellLink, (LPVOID*)&psl);
+    hres = CoCreateInstance(CLSID_ShellLink, NULL, CLSCTX_INPROC_SERVER, IID_IShellLink, (LPVOID *) &psl);
     if (FAILED(hres)) {
         CoUninitialize();
         return QString();
     }
 
     // 获取 IPersistFile 接口的指针
-    IPersistFile* ppf;
-    hres = psl->QueryInterface(IID_IPersistFile, (void**)&ppf);
+    IPersistFile *ppf;
+    hres = psl->QueryInterface(IID_IPersistFile, (void **) &ppf);
     if (FAILED(hres)) {
         psl->Release();
         CoUninitialize();
@@ -54,7 +53,7 @@ QString LnkResolver::resolveLnk(const QString &lnkPath)
     }
 
     // 获取链接目标的路径
-    hres = psl->GetPath(szGotPath, MAX_PATH, (WIN32_FIND_DATA*)&wfd, SLGP_SHORTPATH);
+    hres = psl->GetPath(szGotPath, MAX_PATH, (WIN32_FIND_DATA *) &wfd, SLGP_SHORTPATH);
     if (FAILED(hres)) {
         ppf->Release();
         psl->Release();

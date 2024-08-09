@@ -4,15 +4,14 @@
 #include <QImage>
 #include "singleton.h"
 
-class IconProvider : public QObject
-{
-    Q_OBJECT
+class IconProvider : public QObject {
+Q_OBJECT
 
 private:
     explicit IconProvider(QObject *parent = nullptr);
 
 public:
-    SINGLETON(IconProvider)
+SINGLETON(IconProvider)
 
     Q_INVOKABLE QString getExeIcon(const QString &filePath);
 };
