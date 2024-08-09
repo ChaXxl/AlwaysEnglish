@@ -298,16 +298,10 @@ FluContentPage {
         }
 
         for (let key in GlobalModel.exeInfos) {
-            // 分割路径提取带扩展名的文件名
-            var fileName = key.toString().split("\\").pop();
-
-            // 没有扩展名的文件名
-            const fileNameWithoutExtension = fileName.split(".")[0];
-
             table_view.appendRow({
-                icon: table_view.customItem(com_ico, {icon: GlobalModel.exeInfos.icon}),
+                icon: table_view.customItem(com_ico, {icon: GlobalModel.exeInfos[key].icon}),
                 path: key,
-                name: fileNameWithoutExtension,
+                name: GlobalModel.exeInfos[key].name,
                 turnon: table_view.customItem(com_column_turn_on),
                 Caps: table_view.customItem(com_column_caps),
                 action: table_view.customItem(com_action),
@@ -359,6 +353,7 @@ FluContentPage {
 
         // 用软件路径做 key 来保存其图标 是否启用 是否打开大小写键 等属性
         GlobalModel.exeInfos[exePath] = {
+            name: fileNameWithoutExtension,
             icon: fileIconBase64,
             isTurnOn: true,
             isCapLock: true,
