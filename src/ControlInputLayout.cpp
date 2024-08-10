@@ -51,6 +51,10 @@ void ControlInputLayout::onTimerTimeout() {
 
     isCapLock();
 
+    if (!m_isTurnOn) {
+        return;
+    }
+
     switchToEnglish();
     if (m_isCapLock) {
         capLock();
