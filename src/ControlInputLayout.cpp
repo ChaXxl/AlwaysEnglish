@@ -1,5 +1,8 @@
 #include "ControlInputLayout.h"
 #include "GetActiveWindowPath.h"
+#include <QJSEngine>
+#include <QJSValue>
+#include <QVariantMap>
 
 ControlInputLayout::ControlInputLayout(QObject *parent) : QObject(parent), m_isCapLock(true) {
     m_timer = new QTimer(this);
@@ -16,6 +19,23 @@ void ControlInputLayout::startTask() {
 
 void ControlInputLayout::stopTask() {
     m_timer->stop();
+}
+
+bool ControlInputLayout::isCapLock() {
+    QString exeInfos_str = m_settings->getExeInfos();
+
+    QJSEngine engine;
+
+    QJSValue jsObject = engine.evaluate("(" + exeInfos_str + ")");
+
+    if (!jsObject.isObject()) {
+        return false;
+    }
+
+    QVariantMap variantMap = jsObject.toVariant().toMap();
+
+//    m_isTurnOn = variantMap[""].toBool();
+//    m_isCapLock = variantMap[""].toBool();
 }
 
 void ControlInputLayout::onTimerTimeout() {
