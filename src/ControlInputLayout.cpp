@@ -38,9 +38,10 @@ bool ControlInputLayout::isCapLock() {
         if (key.contains(gw->exeName)) {
             m_isTurnOn = variantMap[key].toMap()["isTurnOn"].toBool();
             m_isCapLock = variantMap[key].toMap()["isCapLock"].toBool();
-            return m_isCapLock;
+            break;
         }
     }
+    return m_isCapLock;
 }
 
 void ControlInputLayout::onTimerTimeout() {
