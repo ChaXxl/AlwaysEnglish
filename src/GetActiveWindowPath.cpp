@@ -66,10 +66,10 @@ QString GetActiveWindowPath::extractExeName(const QString &path) {
 
 bool GetActiveWindowPath::isTargetWindow() {
     // 获取当前正在使用的窗口的软件所在路径
-    QString activeWindow = getCurrentActiveWindow();
+    exePath = getCurrentActiveWindow();
 
     // 提取软件的名称
-    auto exeName = extractExeName(activeWindow);
+    exeName = extractExeName(exePath);
     if (exeName.isEmpty()) {
         return false;
     }

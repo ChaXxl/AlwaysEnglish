@@ -24,6 +24,10 @@ SINGLETON(GetActiveWindowPath)
 
     Q_INVOKABLE bool isTargetWindow();
 
+public:
+    QString exeName;
+    QString exePath;
+
 private:
     SettingsHelper *m_settings = SettingsHelper::getInstance();
 };
