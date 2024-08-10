@@ -5,6 +5,7 @@
 #include <windows.h>
 #include "singleton.h"
 #include "helper/SettingsHelper.h"
+#include "GetActiveWindowPath.h"
 
 class ControlInputLayout : public QObject {
 Q_OBJECT
@@ -16,6 +17,8 @@ private:
     QTimer *m_timer;
 
     SettingsHelper *m_settings = SettingsHelper::getInstance();
+
+    GetActiveWindowPath *gw = GetActiveWindowPath::getInstance();
 
 private:
     explicit ControlInputLayout(QObject *parent = nullptr);

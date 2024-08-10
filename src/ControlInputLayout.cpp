@@ -34,15 +34,21 @@ bool ControlInputLayout::isCapLock() {
 
     QVariantMap variantMap = jsObject.toVariant().toMap();
 
-//    m_isTurnOn = variantMap[""].toBool();
-//    m_isCapLock = variantMap[""].toBool();
+    for (const auto &key : variantMap.keys()) {
+        if (key.contains(gw->exeName)) {
+            m_isTurnOn = variantMap[key].toMap()["isTurnOn"].toBool();
+            m_isCapLock = variantMap[key].toMap()["isCapLock"].toBool();
+            return m_isCapLock;
+        }
+    }
 }
 
 void ControlInputLayout::onTimerTimeout() {
-    auto gw = GetActiveWindowPath::getInstance();
     if (!gw->isTargetWindow()) {
         return;
     }
+
+    isCapLock();
 
     switchToEnglish();
     if (m_isCapLock) {
