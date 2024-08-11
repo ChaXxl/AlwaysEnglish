@@ -39,61 +39,61 @@
     </message>
     <message>
         <location filename="qml/page/home.qml" line="143"/>
-        <location filename="qml/page/home.qml" line="156"/>
+        <location filename="qml/page/home.qml" line="159"/>
         <source>Start</source>
         <translation type="unfinished">启动</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="185"/>
-        <location filename="qml/page/home.qml" line="192"/>
+        <location filename="qml/page/home.qml" line="191"/>
+        <location filename="qml/page/home.qml" line="198"/>
         <source>AlwaysEnglish</source>
         <translation type="unfinished">始终为英文</translation>
     </message>
     <message>
         <location filename="qml/page/home.qml" line="143"/>
         <location filename="qml/page/home.qml" line="150"/>
-        <location filename="qml/page/home.qml" line="189"/>
+        <location filename="qml/page/home.qml" line="195"/>
         <source>Stop</source>
         <translation type="unfinished">停    止</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="154"/>
+        <location filename="qml/page/home.qml" line="157"/>
         <source>Start Successfully</source>
         <translation type="unfinished">启动成功</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="199"/>
+        <location filename="qml/page/home.qml" line="205"/>
         <source>Keep English All The Time</source>
         <translation type="unfinished">无论什么软件, 一直保持英文输入法（在设置里决定是否打开大小写键）</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="219"/>
+        <location filename="qml/page/home.qml" line="225"/>
         <source>Add an APP</source>
         <translation type="unfinished">添加应用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="228"/>
+        <location filename="qml/page/home.qml" line="234"/>
         <source>select an APP</source>
         <translation type="unfinished">选择一个 APP</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="250"/>
+        <location filename="qml/page/home.qml" line="256"/>
         <source>icon</source>
         <translation type="unfinished">应用图标</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="261"/>
+        <location filename="qml/page/home.qml" line="267"/>
         <source>Turn on</source>
         <translation type="unfinished">启用</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="265"/>
+        <location filename="qml/page/home.qml" line="271"/>
         <source>Cap Lock</source>
         <oldsource>Caps</oldsource>
         <translation type="unfinished">大小写键</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="269"/>
+        <location filename="qml/page/home.qml" line="275"/>
         <source>Options</source>
         <translation type="unfinished">操作</translation>
     </message>
