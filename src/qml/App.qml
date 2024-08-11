@@ -22,7 +22,7 @@ FluLauncher {
 
         FluApp.useSystemAppBar = true
 
-        FluApp.windowIcon = "qrc:/res/images/logo.ico"
+        FluApp.windowIcon = "qrc:/res/images/favicon.ico"
 
         FluTheme.darkMode = SettingsHelper.getDarkMode()
         GlobalModel.isAlwaysCapLock = SettingsHelper.getCapLock()
