@@ -7,9 +7,9 @@
         <file>qml/page/settings.qml</file>
         <file>qml/window/MainWindow.qml</file>
         <file>qml/App.qml</file>
-        <file>res/images/logo.ico</file>
         <file>res/images/start.png</file>
         <file>res/images/stop.png</file>
         <file>qml/global/GlobalModel.qml</file>
+        <file>res/images/favicon.ico</file>
     </qresource>
 </RCC>
