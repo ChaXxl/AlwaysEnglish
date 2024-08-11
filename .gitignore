@@ -4,6 +4,7 @@ bin
 build
 cmake-build-debug
 cmake-build-release
+dist
 .vs
 .idea
 CMakePresets.json
