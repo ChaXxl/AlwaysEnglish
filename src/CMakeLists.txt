@@ -32,6 +32,20 @@ add_custom_target(Script-UpdateTranslations
         SOURCES ${TS_FILE_PATHS}
 )
 
+#如果是Windows平台，则生成rc文件，还有inno setup脚本文件
+set(ALWAYSENGLISH_VERSION_RC_PATH "")
+if (WIN32)
+    set(ALWAYSENGLISH_VERSION_RC_PATH ${CMAKE_CURRENT_BINARY_DIR}/version_${PROJECT_NAME}.rc)
+    configure_file(
+            ${CMAKE_SOURCE_DIR}/.cmake/version_exe.rc.in
+            ${ALWAYSENGLISH_VERSION_RC_PATH}
+    )
+    configure_file(
+            ${CMAKE_SOURCE_DIR}/.cmake/InstallerScript.iss.in
+            ${CMAKE_SOURCE_DIR}/package/InstallerScript.iss
+    )
+endif ()
+
 set(PROJECT_SOURCES
 
         qml.qrc
@@ -41,6 +55,7 @@ if (${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(${PROJECT_NAME}
             MANUAL_FINALIZATION
             ${PROJECT_SOURCES}
+            ${ALWAYSENGLISH_VERSION_RC_PATH}
             main.cpp
             IconProvider.h IconProvider.cpp
             singleton.h
@@ -52,6 +67,7 @@ if (${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 else ()
     add_executable(${PROJECT_NAME}
             ${PROJECT_SOURCES}
+            ${ALWAYSENGLISH_VERSION_RC_PATH}
     )
 endif ()
 
