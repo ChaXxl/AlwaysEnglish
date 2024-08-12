@@ -158,15 +158,15 @@ Window {
                     }
                 }
             }
-            FluAcrylic{
-                anchors.fill: parent
-                target: img_back
-                tintOpacity: FluTheme.dark ? 0.80 : 0.75
-                blurRadius: 64
-                visible: window.active && FluTheme.blurBehindWindowEnabled
-                tintColor: FluTheme.dark ? Qt.rgba(0, 0, 0, 1)  : Qt.rgba(1, 1, 1, 1)
-                targetRect: Qt.rect(window.x-window.screen.virtualX,window.y-window.screen.virtualY,window.width,window.height)
-            }
+            // FluAcrylic{
+            //     anchors.fill: parent
+            //     target: img_back
+            //     tintOpacity: FluTheme.dark ? 0.80 : 0.75
+            //     blurRadius: 64
+            //     visible: window.active && FluTheme.blurBehindWindowEnabled
+            //     tintColor: FluTheme.dark ? Qt.rgba(0, 0, 0, 1)  : Qt.rgba(1, 1, 1, 1)
+            //     targetRect: Qt.rect(window.x-window.screen.virtualX,window.y-window.screen.virtualY,window.width,window.height)
+            // }
         }
     }
     Component{
