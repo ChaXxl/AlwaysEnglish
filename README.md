@@ -1,5 +1,5 @@
 <div align=center>
-    <img width="64" src="doc/preview/logo.png"
+    <img width="64" src="doc/preview/logo.png">
 
 # AlwaysEnglish
 可以让指定的软件持续保持英文输入法, 从此不再担心误触导致切换输入法！[去下载](https://github.com/ChaXxl/AlwaysEnglish/releases)
