@@ -9,7 +9,7 @@
 #include "FluTools.h"
 #include "FluTextStyle.h"
 #include "FluWatermark.h"
-#include "FluCaptcha.h"
+//#include "FluCaptcha.h"
 #include "FluTreeModel.h"
 #include "FluRectangle.h"
 #include "FluQrCodeItem.h"
