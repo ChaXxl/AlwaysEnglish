@@ -212,9 +212,9 @@ FluContentPage {
                     myBtn.enabled = !myBtn.enabled
 
                     if (checked) {
-                        ControlInputLayout.startTask()
+                        ControlInputLayout.alwaysStartTask()
                     } else {
-                        ControlInputLayout.stopTask()
+                        ControlInputLayout.alwaysStoptTask()
                     }
                 }
             }

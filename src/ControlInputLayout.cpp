@@ -6,7 +6,10 @@
 
 ControlInputLayout::ControlInputLayout(QObject *parent) : QObject(parent), m_isCapLock(true) {
     m_timer = new QTimer(this);
+    m_timer_always = new QTimer(this);
+
     connect(m_timer, &QTimer::timeout, this, &ControlInputLayout::onTimerTimeout);
+    connect(m_timer_always, &QTimer::timeout, this, &ControlInputLayout::onTimerTimeout_always);
 }
 
 ControlInputLayout::~ControlInputLayout() {
@@ -17,8 +20,16 @@ void ControlInputLayout::startTask() {
     m_timer->start(300);
 }
 
+void ControlInputLayout::alwaysStartTask() {
+    m_timer_always->start(300);
+}
+
 void ControlInputLayout::stopTask() {
     m_timer->stop();
+}
+
+void ControlInputLayout::alwaysStoptTask() {
+    m_timer_always->stop();
 }
 
 bool ControlInputLayout::isCapLock() {
@@ -34,7 +45,7 @@ bool ControlInputLayout::isCapLock() {
 
     QVariantMap variantMap = jsObject.toVariant().toMap();
 
-    for (const auto &key : variantMap.keys()) {
+    for (const auto &key: variantMap.keys()) {
         if (key.contains(gw->exeName)) {
             m_isTurnOn = variantMap[key].toMap()["isTurnOn"].toBool();
             m_isCapLock = variantMap[key].toMap()["isCapLock"].toBool();
@@ -57,6 +68,13 @@ void ControlInputLayout::onTimerTimeout() {
 
     switchToEnglish();
     if (m_isCapLock) {
+        capLock();
+    }
+}
+
+void ControlInputLayout::onTimerTimeout_always() {
+    switchToEnglish();
+    if (m_settings->getCapLock()) {
         capLock();
     }
 }

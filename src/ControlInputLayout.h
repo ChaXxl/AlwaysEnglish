@@ -15,6 +15,7 @@ private:
     bool m_isTurnOn;
 
     QTimer *m_timer;
+    QTimer *m_timer_always;
 
     SettingsHelper *m_settings = SettingsHelper::getInstance();
 
@@ -28,6 +29,7 @@ private:
     void switchToEnglish();
 
     void capLock();
+
     bool isCapLock();
 
 public:
@@ -35,9 +37,15 @@ SINGLETON(ControlInputLayout)
 
     Q_INVOKABLE void startTask();
 
+    Q_INVOKABLE void alwaysStartTask();
+
     Q_INVOKABLE void stopTask();
+
+    Q_INVOKABLE void alwaysStoptTask();
 
 private slots:
 
     void onTimerTimeout();
+
+    void onTimerTimeout_always();
 };
