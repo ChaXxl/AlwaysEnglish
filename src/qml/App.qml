@@ -27,18 +27,18 @@ FluLauncher {
         FluTheme.darkMode = SettingsHelper.getDarkMode()
         GlobalModel.isAlwaysCapLock = SettingsHelper.getCapLock()
 
-    try {
-        let jsonStr = SettingsHelper.getExistingFilePath();
-        const array = JSON.parse(jsonStr);
-        const set = new Set(array);
-        GlobalModel.existingFilePath = set
+        try {
+            let jsonStr = SettingsHelper.getExistingFilePath();
+            const array = JSON.parse(jsonStr);
+            const set = new Set(array);
+            GlobalModel.existingFilePath = set
 
-        jsonStr = SettingsHelper.getExeInfos()
-        const obj = JSON.parse(jsonStr);
-        GlobalModel.exeInfos = obj
-    } catch (e) {
+            jsonStr = SettingsHelper.getExeInfos()
+            const obj = JSON.parse(jsonStr);
+            GlobalModel.exeInfos = obj
+        } catch (e) {
 
-    }
+        }
 
         FluTheme.animationEnabled = true
 
