@@ -17,11 +17,11 @@ ControlInputLayout::~ControlInputLayout() {
 }
 
 void ControlInputLayout::startTask() {
-    m_timer->start(300);
+    m_timer->start(100);
 }
 
 void ControlInputLayout::alwaysStartTask() {
-    m_timer_always->start(300);
+    m_timer_always->start(100);
 }
 
 void ControlInputLayout::stopTask() {
