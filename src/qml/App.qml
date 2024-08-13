@@ -20,7 +20,7 @@ FluLauncher {
     Component.onCompleted: {
         FluApp.init(app)
 
-        FluApp.useSystemAppBar = true
+        FluApp.useSystemAppBar = false
 
         FluApp.windowIcon = "qrc:/res/images/favicon.ico"
 
