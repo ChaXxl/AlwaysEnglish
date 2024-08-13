@@ -85,7 +85,9 @@ bool GetActiveWindowPath::isTargetWindow() {
         }
     }
 
+#ifdef _DEBUG
     qDebug() << exeName << "不在列表";
+#endif
 
     return false;
 }
