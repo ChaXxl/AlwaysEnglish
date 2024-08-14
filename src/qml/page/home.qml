@@ -309,7 +309,11 @@ FluContentPage {
     }
 
     Component.onCompleted: {
-        tour.open()
+        var openCount = SettingsHelper.getOpenCount()
+
+        if (openCount < 3) {
+            tour.open()
+        }
 
         if (!GlobalModel.exeInfos) {
             return;

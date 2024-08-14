@@ -79,6 +79,15 @@ SINGLETON(SettingsHelper)
         return get("existingFilePath", QVariant("")).toString();
     }
 
+    // 记录软件打开次数
+    Q_INVOKABLE int saveOpenCount(const int &openCount) {
+        save("openCount", openCount);
+    }
+
+    Q_INVOKABLE int getOpenCount() {
+        return get("openCount", QVariant("")).toInt();
+    }
+
 private:
     void save(const QString &key, QVariant val);
 

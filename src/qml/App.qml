@@ -27,6 +27,10 @@ FluLauncher {
         FluTheme.darkMode = SettingsHelper.getDarkMode()
         GlobalModel.isAlwaysCapLock = SettingsHelper.getCapLock()
 
+        var openCount = SettingsHelper.getOpenCount()
+        openCount += 1
+        SettingsHelper.saveOpenCount(openCount)
+
         try {
             let jsonStr = SettingsHelper.getExistingFilePath();
             const array = JSON.parse(jsonStr);
