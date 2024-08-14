@@ -119,12 +119,12 @@ FluWindow {
         }
     }
 
-    Component.onCompleted: {
-        var isEnglishInputInstalled = ControlInputLayout.isEnglishInputInstalled()
-        if (!isEnglishInputInstalled) {
-            dialog.open()
-        }
-    }
+    // Component.onCompleted: {
+    //     var isEnglishInputInstalled = ControlInputLayout.isEnglishInputInstalled()
+    //     if (!isEnglishInputInstalled) {
+    //         dialog.open()
+    //     }
+    // }
 
     function changeDark() {
         FluTheme.darkMode = FluTheme.dark ? FluThemeType.Light : FluThemeType.Dark
