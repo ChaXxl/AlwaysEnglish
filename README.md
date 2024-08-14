@@ -41,3 +41,11 @@
         
 
     * 构建好的软件保存在 `dist` 目录
+
+# 致谢
+* [FluentUI for qml](https://github.com/zhuzichu520/FluentUI)
+
+# 相关资料
+* [Windows 键盘布局标识符](https://www.science.co.il/language/Locale-codes.php)
+* [MS-LCID](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f)
+
