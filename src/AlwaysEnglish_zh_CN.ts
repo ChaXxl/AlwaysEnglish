@@ -215,12 +215,11 @@ Please go to settings to install English (US) language.</oldsource>
         <translation type="unfinished">深色</translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="51"/>
         <source>Sticky on Top</source>
-        <translation type="unfinished">窗口置顶</translation>
+        <translation type="obsolete">窗口置顶</translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="72"/>
+        <location filename="qml/page/settings.qml" line="51"/>
         <source>Whether turn on Cap Lock when AlwaysEnglish is on</source>
         <translation type="unfinished">当一直开启英文输入法时，是否一直打开大小写键</translation>
     </message>

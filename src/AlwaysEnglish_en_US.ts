@@ -209,11 +209,6 @@ Please go to settings to install English (US) language.</oldsource>
     </message>
     <message>
         <location filename="qml/page/settings.qml" line="51"/>
-        <source>Sticky on Top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/settings.qml" line="72"/>
         <source>Whether turn on Cap Lock when AlwaysEnglish is on</source>
         <translation type="unfinished"></translation>
     </message>
