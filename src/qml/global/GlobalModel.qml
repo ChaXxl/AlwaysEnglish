@@ -5,7 +5,6 @@ import FluentUI 1.0
 
 QtObject {
     property int testInt: 0
-    property bool stayTop: false
     property bool isAlwaysCapLock: true
 
     // 使用 Set 来存储表格的软件路径

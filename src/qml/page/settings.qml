@@ -47,27 +47,6 @@ FluScrollablePage {
         height: 50
         padding: 10
         FluCheckBox {
-            id: _isStayTop
-            text: qsTr("Sticky on Top")
-            anchors.verticalCenter: parent.verticalCenter
-            onClicked: {
-                GlobalModel.stayTop = checked
-
-                setWindowFlags(checked)
-            }
-        }
-
-        Component.onCompleted: {
-            _isStayTop.checked = GlobalModel.stayTop
-        }
-    }
-
-    FluFrame {
-        Layout.fillWidth: true
-        Layout.topMargin: 20
-        height: 50
-        padding: 10
-        FluCheckBox {
             id: _isAlwaysCapLock
             text: qsTr("Whether turn on Cap Lock when AlwaysEnglish is on")
             anchors.verticalCenter: parent.verticalCenter
@@ -79,20 +58,6 @@ FluScrollablePage {
 
         Component.onCompleted: {
             _isAlwaysCapLock.checked = GlobalModel.isAlwaysCapLock
-        }
-    }
-
-    function setWindowFlags(checked) {
-        if (checked) {
-            // 置顶的时候保留系统边框和窗口控制按钮
-            flags = Qt.Window |
-                Qt.WindowStaysOnTopHint |
-                Qt.WindowTitleHint |
-                Qt.WindowSystemMenuHint |
-                Qt.WindowCloseButtonHint |
-                Qt.WindowMinMaxButtonsHint
-        } else {
-            flags = Qt.Window
         }
     }
 }
