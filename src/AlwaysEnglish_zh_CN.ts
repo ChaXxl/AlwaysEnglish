@@ -120,28 +120,28 @@ Please go to settings to install English (US) language.</oldsource>
         <translation type="unfinished">操作</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="304"/>
+        <location filename="qml/page/home.qml" line="305"/>
         <source>1. Add Softwares</source>
         <translation type="unfinished">1. 添加软件</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="304"/>
+        <location filename="qml/page/home.qml" line="306"/>
         <source>Drag the softwares or shortcuts in here</source>
         <translation type="unfinished">把软件或者快捷方式拖到这里</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="305"/>
+        <location filename="qml/page/home.qml" line="311"/>
         <source>or click this button to add a software or shortcut</source>
         <translation type="unfinished">或者点这里添加软件</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="306"/>
-        <location filename="qml/page/home.qml" line="307"/>
+        <location filename="qml/page/home.qml" line="314"/>
+        <location filename="qml/page/home.qml" line="316"/>
         <source>2. Start</source>
         <translation type="unfinished">2. 启动</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="306"/>
+        <location filename="qml/page/home.qml" line="314"/>
         <source>click this button to start</source>
         <translation type="unfinished">点这里启动</translation>
     </message>
@@ -150,7 +150,7 @@ Please go to settings to install English (US) language.</oldsource>
         <translation type="obsolete">其它</translation>
     </message>
     <message>
-        <location filename="qml/page/home.qml" line="307"/>
+        <location filename="qml/page/home.qml" line="317"/>
         <source>or you can click this button to switch to English in all APP all the time</source>
         <translation type="unfinished">点这个就会在任何软件一直都开着英文输入法（适合单机游戏玩家）</translation>
     </message>
