@@ -298,7 +298,19 @@ FluContentPage {
         }
     }
 
+    FluTour {
+        id: tour
+        steps: [
+            {title: qsTr("1. Add Softwares"), description: qsTr("Drag the softwares or shortcuts in here"), target: () => table_view},
+            {title: ("1. Add Softwares"), description: qsTr("or click this button to add a software or shortcut"), target: () => btn_addApp},
+            {title: qsTr("2. Start"), description: qsTr("click this button to start"), target: () => myBtn},
+            {title: qsTr("2. Start"), description: qsTr("or you can click this button to switch to English in all APP all the time"), target: () => btn_AlwaysEnglish}
+        ]
+    }
+
     Component.onCompleted: {
+        tour.open()
+
         if (!GlobalModel.exeInfos) {
             return;
         }
