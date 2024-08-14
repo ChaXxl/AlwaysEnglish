@@ -60,7 +60,7 @@ FluWindow {
 
     Component.onCompleted: {
         var isEnglishInputInstalled = ControlInputLayout.isEnglishInputInstalled()
-        if (isEnglishInputInstalled) {
+        if (!isEnglishInputInstalled) {
             dialog.open()
         }
     }
