@@ -80,7 +80,7 @@ SINGLETON(SettingsHelper)
     }
 
     // 记录软件打开次数
-    Q_INVOKABLE int saveOpenCount(const int &openCount) {
+    Q_INVOKABLE void saveOpenCount(const int &openCount) {
         save("openCount", openCount);
     }
 
