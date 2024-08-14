@@ -20,17 +20,24 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="11"/>
+        <location filename="qml/window/MainWindow.qml" line="12"/>
         <source>AlwaysEnglish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="52"/>
+        <location filename="qml/window/MainWindow.qml" line="69"/>
+        <location filename="qml/window/MainWindow.qml" line="107"/>
+        <location filename="qml/window/MainWindow.qml" line="115"/>
+        <source>Quit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="96"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="53"/>
+        <location filename="qml/window/MainWindow.qml" line="97"/>
         <source>The System dosen&apos;t have an English (US) input method insatlled
 The softeare will be unavailable!
 Please go to settings to install English (US) language.</source>
@@ -40,8 +47,33 @@ Please go to settings to install English (US) language.</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="55"/>
+        <location filename="qml/window/MainWindow.qml" line="99"/>
         <source>go to install</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="108"/>
+        <source>Are you sure you want to exit the program?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="109"/>
+        <source>Minimize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="112"/>
+        <source>Friendly Reminder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="112"/>
+        <source>AlwaysEnglish is hidden from the tray, click on the tray to activate the window again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="116"/>
+        <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
