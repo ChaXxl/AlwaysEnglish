@@ -116,6 +116,37 @@ Please go to settings to install English (US) language.</oldsource>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="qml/page/home.qml" line="304"/>
+        <source>1. Add Softwares</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="304"/>
+        <source>Drag the softwares or shortcuts in here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="305"/>
+        <source>or click this button to add a software or shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="306"/>
+        <location filename="qml/page/home.qml" line="307"/>
+        <source>2. Start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="306"/>
+        <source>click this button to start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/home.qml" line="307"/>
+        <source>or you can click this button to switch to English in all APP all the time</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>settings</name>
