@@ -20,9 +20,31 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="10"/>
+        <location filename="qml/window/MainWindow.qml" line="11"/>
         <source>AlwaysEnglish</source>
         <translation type="unfinished">让输入法始终为英文状态</translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="52"/>
+        <source>Warning</source>
+        <translation type="unfinished">警告</translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="53"/>
+        <source>The System dosen&apos;t have an English (US) input method insatlled
+The softeare will be unavailable!
+Please go to settings to install English (US) language.</source>
+        <oldsource>The System dosen&apos;t have an English (US) input insatlled
+The softeare will be unavailable!
+Please go to settings to install English (US) language.</oldsource>
+        <translation type="unfinished">系统没有安装美式英文输入法
+软件将不可用！
+请到设置里安装美式英文语言及输入法</translation>
+    </message>
+    <message>
+        <location filename="qml/window/MainWindow.qml" line="55"/>
+        <source>go to install</source>
+        <translation type="unfinished">去安装</translation>
     </message>
 </context>
 <context>
