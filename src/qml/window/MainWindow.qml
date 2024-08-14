@@ -7,6 +7,7 @@ import "../global"
 FluWindow {
 
     id: window
+    windowIcon: "qrc:/res/images/favicon.ico"
     title: qsTr("AlwaysEnglish")
     width: 860
     height: 668
@@ -44,6 +45,4 @@ FluWindow {
         id: loader_reveal
         anchors.fill: parent
     }
-
-
 }
