@@ -35,6 +35,10 @@ private:
 public:
 SINGLETON(ControlInputLayout)
 
+    Q_INVOKABLE bool isEnglishInputInstalled();
+
+    Q_INVOKABLE void gotoLanguageSettings();
+
     Q_INVOKABLE void startTask();
 
     Q_INVOKABLE void alwaysStartTask();

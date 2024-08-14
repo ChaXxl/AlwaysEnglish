@@ -45,4 +45,23 @@ FluWindow {
         id: loader_reveal
         anchors.fill: parent
     }
+
+    FluContentDialog {
+        id: dialog
+        implicitWidth: 500
+        title: qsTr("Warning")
+        message: qsTr("The System dosen't have an English (US) input method insatlled\nThe softeare will be unavailable!\nPlease go to settings to install English (US) language.")
+        buttonFlags: FluContentDialogType.PositiveButton
+        positiveText: qsTr("go to install")
+        onPositiveClicked: {
+            ControlInputLayout.gotoLanguageSettings();
+        }
+    }
+
+    Component.onCompleted: {
+        var isEnglishInputInstalled = ControlInputLayout.isEnglishInputInstalled()
+        if (isEnglishInputInstalled) {
+            dialog.open()
+        }
+    }
 }

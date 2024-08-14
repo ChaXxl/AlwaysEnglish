@@ -16,6 +16,23 @@ ControlInputLayout::~ControlInputLayout() {
     stopTask();
 }
 
+bool ControlInputLayout::isEnglishInputInstalled() {
+    HKL layouts[10] = {0};
+    int layoutCount = GetKeyboardLayoutList(10, layouts);
+
+    for (int i = 0; i < layoutCount; i++) {
+        if (layouts[i] == (HKL) 0x4090409) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void ControlInputLayout::gotoLanguageSettings() {
+    ShellExecute(NULL, L"open", L"ms-settings:regionlanguage", NULL, NULL, SW_SHOWNORMAL);
+}
+
 void ControlInputLayout::startTask() {
     m_timer->start(100);
 }
@@ -98,3 +115,5 @@ void ControlInputLayout::capLock() {
         keybd_event(VK_CAPITAL, 0x3a, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, 0);
     }
 }
+
+
