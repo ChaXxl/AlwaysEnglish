@@ -3,13 +3,13 @@
 /**
  * @brief The Singleton class
  */
-template <typename T>
+template<typename T>
 class Singleton {
 public:
     static T *getInstance();
 };
 
-template <typename T>
+template<typename T>
 T *Singleton<T>::getInstance() {
     static T *instance = new T();
     return instance;
