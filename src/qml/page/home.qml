@@ -307,7 +307,7 @@ FluContentPage {
                 target: () => table_view
             },
             {
-                title: ("1. Add Softwares"),
+                title: qsTr("1. Add Softwares"),
                 description: qsTr("or click this button to add a software or shortcut"),
                 target: () => btn_addApp
             },
