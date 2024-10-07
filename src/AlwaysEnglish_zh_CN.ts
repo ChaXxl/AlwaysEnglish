@@ -22,7 +22,7 @@
     <message>
         <location filename="qml/window/MainWindow.qml" line="12"/>
         <source>AlwaysEnglish</source>
-        <translation type="unfinished">让输入法始终为英文状态</translation>
+        <translation type="unfinished">英文输入法锁定软件 – V1.0</translation>
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="69"/>
@@ -153,6 +153,7 @@ Please go to settings to install English (US) language.</oldsource>
     </message>
     <message>
         <location filename="qml/page/home.qml" line="305"/>
+        <location filename="qml/page/home.qml" line="310"/>
         <source>1. Add Softwares</source>
         <translation type="unfinished">1. 添加软件</translation>
     </message>

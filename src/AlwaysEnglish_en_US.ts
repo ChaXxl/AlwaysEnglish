@@ -150,6 +150,7 @@ Please go to settings to install English (US) language.</oldsource>
     </message>
     <message>
         <location filename="qml/page/home.qml" line="305"/>
+        <location filename="qml/page/home.qml" line="310"/>
         <source>1. Add Softwares</source>
         <translation type="unfinished"></translation>
     </message>
