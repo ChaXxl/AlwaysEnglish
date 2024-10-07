@@ -4,12 +4,12 @@
 #include <QClipboard>
 #include <QUuid>
 #include <QCursor>
-#include <QScreen>
+//#include <QScreen>
 #include <QColor>
 #include <QFileInfo>
 #include <QProcess>
 #include <QDir>
-#include <QOpenGLContext>
+//#include <QOpenGLContext>
 #include <QCryptographicHash>
 #include <QTextDocument>
 #include <QQuickWindow>
