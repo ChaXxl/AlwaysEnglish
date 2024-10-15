@@ -7,6 +7,9 @@ QtObject {
     property int testInt: 0
     property bool isAlwaysCapLock: true
 
+    // 开机自启动
+    property bool isAutoStart: false
+
     // 使用 Set 来存储表格的软件路径
     property var existingFilePath: new Set()
 

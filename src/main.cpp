@@ -9,6 +9,7 @@
 #include "ControlInputLayout.h"
 #include "GetActiveWindowPath.h"
 #include "helper/SettingsHelper.h"
+#include "utils.hpp"
 
 int main(int argc, char *argv[]) {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -34,6 +35,7 @@ int main(int argc, char *argv[]) {
     engine.rootContext()->setContextProperty("ControlInputLayout", ControlInputLayout::getInstance());
     engine.rootContext()->setContextProperty("GetActiveWindowPath", GetActiveWindowPath::getInstance());
     engine.rootContext()->setContextProperty("SettingsHelper", SettingsHelper::getInstance());
+    engine.rootContext()->setContextProperty("Utils", Utils::getInstance());
 
     const QUrl url(QStringLiteral("qrc:/qml/App.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,

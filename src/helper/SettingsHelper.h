@@ -88,6 +88,15 @@ SINGLETON(SettingsHelper)
         return get("openCount", QVariant("")).toInt();
     }
 
+    // 开机自启动
+    Q_INVOKABLE void saveAutoStart(bool autoStart) {
+        save("autoStart", autoStart);
+    }
+
+    Q_INVOKABLE bool getAutoStart() {
+        return get("autoStart", QVariant(0)).toBool();
+    }
+
 private:
     void save(const QString &key, QVariant val);
 

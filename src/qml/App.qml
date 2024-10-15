@@ -27,6 +27,9 @@ FluLauncher {
         FluTheme.darkMode = SettingsHelper.getDarkMode()
         GlobalModel.isAlwaysCapLock = SettingsHelper.getCapLock()
 
+        // 是否开机自启动
+        GlobalModel.isAutoStart = SettingsHelper.getAutoStart();
+
         var openCount = SettingsHelper.getOpenCount()
         openCount += 1
         SettingsHelper.saveOpenCount(openCount)

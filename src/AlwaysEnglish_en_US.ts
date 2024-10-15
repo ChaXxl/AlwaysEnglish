@@ -209,8 +209,13 @@ Please go to settings to install English (US) language.</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="51"/>
+        <location filename="qml/page/settings.qml" line="76"/>
         <source>Whether turn on Cap Lock when AlwaysEnglish is on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/settings.qml" line="53"/>
+        <source>Running at start</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -58,6 +58,7 @@ if (${QT_VERSION_MAJOR} GREATER_EQUAL 6)
             ${ALWAYSENGLISH_VERSION_RC_PATH}
             main.cpp
             IconProvider.h IconProvider.cpp
+            utils.hpp
             singleton.h
             LnkResolver.h LnkResolver.cpp
             ControlInputLayout.h ControlInputLayout.cpp

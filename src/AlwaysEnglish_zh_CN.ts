@@ -22,7 +22,7 @@
     <message>
         <location filename="qml/window/MainWindow.qml" line="12"/>
         <source>AlwaysEnglish</source>
-        <translation type="unfinished">英文输入法锁定软件 – V1.0</translation>
+        <translation type="unfinished">英文输入法锁定软件 – V1.2</translation>
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="69"/>
@@ -216,11 +216,16 @@ Please go to settings to install English (US) language.</oldsource>
         <translation type="unfinished">深色</translation>
     </message>
     <message>
+        <location filename="qml/page/settings.qml" line="53"/>
+        <source>Running at start</source>
+        <translation type="unfinished">开机自启动</translation>
+    </message>
+    <message>
         <source>Sticky on Top</source>
         <translation type="obsolete">窗口置顶</translation>
     </message>
     <message>
-        <location filename="qml/page/settings.qml" line="51"/>
+        <location filename="qml/page/settings.qml" line="76"/>
         <source>Whether turn on Cap Lock when AlwaysEnglish is on</source>
         <translation type="unfinished">当一直开启英文输入法时，是否一直打开大小写键</translation>
     </message>
